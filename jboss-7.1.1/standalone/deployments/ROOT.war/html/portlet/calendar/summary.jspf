@@ -1,0 +1,75 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<%
+int maxDayOfMonth = selCal.getActualMaximum(Calendar.DATE);
+
+Set data = new HashSet();
+
+for (int i = 1; i <= maxDayOfMonth; i++) {
+	Calendar tempCal = (Calendar)selCal.clone();
+
+	tempCal.set(Calendar.MONTH, selMonth);
+	tempCal.set(Calendar.DATE, i);
+	tempCal.set(Calendar.YEAR, selYear);
+
+	boolean hasEvents = CalEventServiceUtil.hasEvents(scopeGroupId, tempCal, eventType);
+
+	if (hasEvents) {
+		data.add(new Integer(i));
+	}
+}
+%>
+
+<table width="100%">
+<tr>
+	<c:if test="<%= summaryTabShowMiniMonth %>">
+		<td class="lfr-top" style="padding-right: 10px;" width="1%">
+			<div class="calendar-container float-container">
+				<div class="calendar-day">
+					 <div class="day-text"><%= DateUtil.getDate(Time.getDate(selCal.getTime(), timeZone), "EEEE", locale) %></div>
+					 <div class="day-number"><%= selDay %></div>
+				</div>
+
+				<liferay-ui:calendar
+					data="<%= data %>"
+					day="<%= selDay %>"
+					headerFormat="<%= dateFormatDate %>"
+					month="<%= selMonth %>"
+					year="<%= selYear %>"
+				/>
+			</div>
+		</td>
+	</c:if>
+
+	<c:if test='<%= summaryTabOrientation.equals("vertical") %>'>
+		</tr>
+		<tr>
+	</c:if>
+
+	<c:if test="<%= summaryTabShowTodaysEvents %>">
+		<td class="lfr-top">
+			<%@ include file="/html/portlet/calendar/event_iterator.jspf" %>
+		</td>
+	</c:if>
+</tr>
+</table>
+
+<aui:script>
+	function <portlet:namespace />updateCalendar(month, day, year) {
+		location.href = '<portlet:renderURL><portlet:param name="tabs1" value="day" /><portlet:param name="eventType" value="<%= eventType %>" /></portlet:renderURL>&<portlet:namespace />month=' + month + '&<portlet:namespace />day=' + day + '&<portlet:namespace />year=' + year;
+	}
+</aui:script>

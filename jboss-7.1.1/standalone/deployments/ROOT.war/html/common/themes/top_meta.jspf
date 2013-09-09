@@ -1,0 +1,41 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<c:if test="<%= BrowserSnifferUtil.isIe(request) %>">
+	<meta content="<%= PropsValues.BROWSER_COMPATIBILITY_IE_VERSIONS %>" http-equiv="x-ua-compatible" />
+</c:if>
+
+<meta content="<%= ContentTypes.TEXT_HTML_UTF8 %>" http-equiv="content-type" />
+
+<%
+int refreshRate = ParamUtil.getInteger(request, "refresh_rate");
+%>
+
+<c:if test="<%= refreshRate > 0 %>">
+	<meta content="<%= refreshRate %>;" http-equiv="refresh" />
+</c:if>
+
+<%
+String cacheControl = request.getParameter("cache_control");
+%>
+
+<c:if test='<%= (cacheControl != null) && (cacheControl.equals("0")) %>'>
+	<meta content="no-cache" http-equiv="cache-control" />
+	<meta content="no-cache" http-equiv="pragma" />
+	<meta content="0" http-equiv="expires" />
+</c:if>
+
+<liferay-theme:meta-tags />

@@ -1,0 +1,79 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<liferay-ui:search-container-column-text
+	buffer="buffer"
+	href="<%= rowURL %>"
+	name="name"
+>
+
+	<%
+	if (rowURL != null) {
+		buffer.append("<a href=\"");
+		buffer.append(rowURL);
+		buffer.append("\">");
+	}
+
+	buffer.append("<img align=\"left\" border=\"0\" style=\"margin: 0px 5px 0px 0px;\" src=\"");
+	buffer.append(themeDisplay.getPathThemeImages());
+	buffer.append("/common/organization_icon.png\">");
+	buffer.append("<strong>");
+	buffer.append(curOrganization.getName());
+	buffer.append("</strong>");
+
+	if (rowURL != null) {
+		buffer.append("</a>");
+	}
+
+	int suborganizationsCount = OrganizationLocalServiceUtil.searchCount(company.getCompanyId(), curOrganization.getOrganizationId(), null, null, null, null, organizationParams);
+
+	LinkedHashMap<String, Object> userParams = new LinkedHashMap<String, Object>();
+
+	userParams.put("usersOrgs", curOrganization.getOrganizationId());
+
+	int organizationUserCount = UserLocalServiceUtil.searchCount(company.getCompanyId(), null, 0, userParams);
+
+	if ((suborganizationsCount > 0) || (organizationUserCount > 0)) {
+		buffer.append("<br /><em>");
+
+		if (suborganizationsCount > 0) {
+			buffer.append((suborganizationsCount == 1) ? LanguageUtil.format(pageContext, "x-suborganization", String.valueOf(suborganizationsCount)) : LanguageUtil.format(pageContext, "x-suborganizations", String.valueOf(suborganizationsCount)));
+		}
+
+		if ((suborganizationsCount > 0) && (organizationUserCount > 0)) {
+			buffer.append(StringPool.SPACE + LanguageUtil.get(pageContext, "and").toLowerCase() + StringPool.SPACE);
+		}
+
+		if (organizationUserCount > 0) {
+			buffer.append((organizationUserCount == 1) ? LanguageUtil.format(pageContext, "x-user", String.valueOf(organizationUserCount)) : LanguageUtil.format(pageContext, "x-users", String.valueOf(organizationUserCount)));
+		}
+
+		buffer.append("</em>");
+	}
+	%>
+
+</liferay-ui:search-container-column-text>
+
+<liferay-ui:search-container-column-text
+	href="<%= rowURL %>"
+	name="type"
+	value="<%= LanguageUtil.get(pageContext, curOrganization.getType()) %>"
+/>
+
+<liferay-ui:search-container-column-jsp
+	align="right"
+	path="/html/portlet/users_admin/organization_action.jsp"
+/>

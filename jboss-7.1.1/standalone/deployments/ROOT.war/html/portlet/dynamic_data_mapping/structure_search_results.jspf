@@ -1,0 +1,49 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<%
+StructureSearchTerms searchTerms = (StructureSearchTerms)searchContainer.getSearchTerms();
+
+long[] groupIds = new long[] {groupId};
+
+if (showGlobalScope) {
+	groupIds = DLUtil.getGroupIds(themeDisplay);
+}
+
+if (searchTerms.isAdvancedSearch()) {
+	results = DDMStructureServiceUtil.search(company.getCompanyId(), groupIds, new long[] {searchTerms.getClassNameId()}, searchTerms.getName(), searchTerms.getDescription(), searchTerms.getStorageType(), DDMStructureConstants.TYPE_DEFAULT, searchTerms.isAndOperator(), searchContainer.getStart(), searchContainer.getEnd(), searchContainer.getOrderByComparator());
+	total = DDMStructureServiceUtil.searchCount(company.getCompanyId(), groupIds, new long[] {searchTerms.getClassNameId()}, searchTerms.getName(), searchTerms.getDescription(), searchTerms.getStorageType(), DDMStructureConstants.TYPE_DEFAULT, searchTerms.isAndOperator());
+}
+else {
+	long[] classNameIds = null;
+
+	if (classNameId > 0) {
+		classNameIds = new long[] {classNameId};
+	}
+
+	String[] storageTypes = null;
+
+	if (Validator.isNotNull(storageTypeValue)) {
+		storageTypes = new String[] {storageTypeValue};
+	}
+
+	results = DDMStructureServiceUtil.search(company.getCompanyId(), groupIds, classNameIds, searchTerms.getKeywords(), searchContainer.getStart(), searchContainer.getEnd(), searchContainer.getOrderByComparator());
+	total = DDMStructureServiceUtil.searchCount(company.getCompanyId(), groupIds, classNameIds, searchTerms.getKeywords());
+}
+
+pageContext.setAttribute("results", results);
+pageContext.setAttribute("total", total);
+%>

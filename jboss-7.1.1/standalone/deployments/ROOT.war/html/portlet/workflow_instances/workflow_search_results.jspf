@@ -1,0 +1,50 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<%
+boolean allInstances = false;
+
+String[] assetTypes = WorkflowHandlerUtil.getSearchableAssetTypes();
+
+List<WorkflowInstance> resultsInstances = null;
+
+int totalInstances = 0;
+
+if (portletName.equals(PortletKeys.WORKFLOW_DEFINITIONS) || portletName.equals(PortletKeys.WORKFLOW_INSTANCES)) {
+	if (completedInstances) {
+		searchContainer.setEmptyResultsMessage("there-are-no-completed-instances");
+	}
+	else {
+		searchContainer.setEmptyResultsMessage("there-are-no-pending-instances");
+	}
+
+	allInstances = true;
+
+	resultsInstances = WorkflowInstanceManagerUtil.getWorkflowInstances(company.getCompanyId(), null, assetTypes, completedInstances, searchContainer.getStart(), searchContainer.getEnd(), WorkflowComparatorFactoryUtil.getInstanceStartDateComparator());
+	totalInstances = WorkflowInstanceManagerUtil.getWorkflowInstanceCount(company.getCompanyId(), null, assetTypes, completedInstances);
+}
+else {
+	if (completedInstances) {
+		searchContainer.setEmptyResultsMessage("there-are-no-completed-instances-started-by-me");
+	}
+	else {
+		searchContainer.setEmptyResultsMessage("there-are-no-pending-instances-started-by-me");
+	}
+
+	resultsInstances = WorkflowInstanceManagerUtil.getWorkflowInstances(company.getCompanyId(), user.getUserId(), assetTypes, completedInstances, searchContainer.getStart(), searchContainer.getEnd(), WorkflowComparatorFactoryUtil.getInstanceStartDateComparator());
+	totalInstances = WorkflowInstanceManagerUtil.getWorkflowInstanceCount(company.getCompanyId(), user.getUserId(), assetTypes, completedInstances);
+}
+%>

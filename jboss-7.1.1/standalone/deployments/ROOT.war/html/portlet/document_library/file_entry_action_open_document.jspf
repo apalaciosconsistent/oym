@@ -1,0 +1,66 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<c:if test="<%= DLFileEntryPermission.contains(permissionChecker, fileEntry, ActionKeys.VIEW) %>">
+
+	<%
+	if (portletDisplay.isWebDAVEnabled() && BrowserSnifferUtil.isIe(request)) {
+		String webDavUrl = DLUtil.getWebDavURL(themeDisplay, fileEntry.getFolder(), fileEntry, true);
+
+		if (DLUtil.isOfficeExtension(fileEntry.getExtension())) {
+			String taglibOnClick = "javascript:" + liferayPortletResponse.getNamespace() + "openDocument('" + webDavUrl + "');";
+	%>
+
+			<liferay-ui:icon
+				image="../document_library/msoffice"
+				message="open-in-ms-office"
+				onClick="<%= taglibOnClick %>"
+				url="javascript:;"
+			/>
+
+	<%
+		}
+	}
+	%>
+
+	<aui:script>
+		Liferay.provide(
+			window,
+			'<portlet:namespace />openDocument',
+			function(webDavUrl) {
+				var A = AUI();
+
+				Liferay.Util.openDocument(
+					webDavUrl,
+					null,
+					function(exception) {
+						var errorMessage = A.Lang.sub(
+							'<%= UnicodeLanguageUtil.get(pageContext, "cannot-open-the-requested-document-due-to-the-following-reason") %>',
+							[exception.message]
+						);
+
+						var openMSOfficeError = A.one('#<portlet:namespace />openMSOfficeError');
+
+						openMSOfficeError.html(errorMessage);
+
+						openMSOfficeError.show();
+					}
+				);
+			},
+			['aui-base']
+		);
+	</aui:script>
+</c:if>

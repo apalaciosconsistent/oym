@@ -1,0 +1,115 @@
+18:55:05,314 INFO  [org.jboss.modules] JBoss Modules version 1.1.1.GA
+18:55:05,676 INFO  [org.jboss.msc] JBoss MSC version 1.0.2.GA
+18:55:05,739 INFO  [org.jboss.as] JBAS015899: JBoss AS 7.1.1.Final "Brontes" starting
+18:55:05,743 DEBUG [org.jboss.as.config] Configured system properties:
+	file.encoding = UTF-8
+	file.encoding.pkg = sun.io
+	file.separator = /
+	java.awt.graphicsenv = sun.awt.X11GraphicsEnvironment
+	java.awt.headless = true
+	java.awt.printerjob = sun.print.PSPrinterJob
+	java.class.path = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/jboss-modules.jar
+	java.class.version = 50.0
+	java.endorsed.dirs = /usr/lib/jvm/java-6-oracle/jre/lib/endorsed
+	java.ext.dirs = /usr/lib/jvm/java-6-oracle/jre/lib/ext:/usr/java/packages/lib/ext
+	java.home = /usr/lib/jvm/java-6-oracle/jre
+	java.io.tmpdir = /tmp
+	java.library.path = /usr/lib/jvm/java-6-oracle/jre/lib/amd64/server:/usr/lib/jvm/java-6-oracle/jre/lib/amd64:/usr/lib/jvm/java-6-oracle/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.net.preferIPv4Stack = true
+	java.runtime.name = Java(TM) SE Runtime Environment
+	java.runtime.version = 1.6.0_45-b06
+	java.specification.name = Java Platform API Specification
+	java.specification.vendor = Sun Microsystems Inc.
+	java.specification.version = 1.6
+	java.util.logging.manager = org.jboss.logmanager.LogManager
+	java.vendor = Sun Microsystems Inc.
+	java.vendor.url = http://java.sun.com/
+	java.vendor.url.bug = http://java.sun.com/cgi-bin/bugreport.cgi
+	java.version = 1.6.0_45
+	java.vm.info = mixed mode
+	java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+	java.vm.specification.name = Java Virtual Machine Specification
+	java.vm.specification.vendor = Sun Microsystems Inc.
+	java.vm.specification.version = 1.0
+	java.vm.vendor = Sun Microsystems Inc.
+	java.vm.version = 20.45-b01
+	javax.management.builder.initial = org.jboss.as.jmx.PluggableMBeanServerBuilder
+	javax.xml.datatype.DatatypeFactory = __redirected.__DatatypeFactory
+	javax.xml.parsers.DocumentBuilderFactory = __redirected.__DocumentBuilderFactory
+	javax.xml.parsers.SAXParserFactory = __redirected.__SAXParserFactory
+	javax.xml.stream.XMLEventFactory = __redirected.__XMLEventFactory
+	javax.xml.stream.XMLInputFactory = __redirected.__XMLInputFactory
+	javax.xml.stream.XMLOutputFactory = __redirected.__XMLOutputFactory
+	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
+	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
+	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
+	jboss.bind.address = localhost
+	jboss.home.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1
+	jboss.host.name = deuxmachina
+	jboss.modules.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/modules
+	jboss.modules.system.pkgs = org.jboss.byteman
+	jboss.node.name = deuxmachina
+	jboss.qualified.host.name = deuxmachina
+	jboss.server.base.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone
+	jboss.server.config.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/configuration
+	jboss.server.data.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/data
+	jboss.server.deploy.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/data/content
+	jboss.server.log.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/log
+	jboss.server.name = deuxmachina
+	jboss.server.temp.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/tmp
+	line.separator = 
+
+	logging.configuration = file:/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/configuration/logging.properties
+	module.path = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/modules
+	org.jboss.boot.log.file = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/log/boot.log
+	org.jboss.resolver.warning = true
+	org.xml.sax.driver = __redirected.__XMLReaderFactory
+	os.arch = amd64
+	os.name = Linux
+	os.version = 3.8.0-29-generic
+	path.separator = :
+	sun.arch.data.model = 64
+	sun.boot.class.path = /usr/lib/jvm/java-6-oracle/jre/lib/resources.jar:/usr/lib/jvm/java-6-oracle/jre/lib/rt.jar:/usr/lib/jvm/java-6-oracle/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-6-oracle/jre/lib/jsse.jar:/usr/lib/jvm/java-6-oracle/jre/lib/jce.jar:/usr/lib/jvm/java-6-oracle/jre/lib/charsets.jar:/usr/lib/jvm/java-6-oracle/jre/lib/modules/jdk.boot.jar:/usr/lib/jvm/java-6-oracle/jre/classes
+	sun.boot.library.path = /usr/lib/jvm/java-6-oracle/jre/lib/amd64
+	sun.cpu.endian = little
+	sun.cpu.isalist = 
+	sun.desktop = gnome
+	sun.io.unicode.encoding = UnicodeLittle
+	sun.java.command = org.jboss.modules.Main -mp /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -b localhost --server-config=standalone.xml
+	sun.java.launcher = SUN_STANDARD
+	sun.jnu.encoding = UTF-8
+	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+	sun.os.patch.level = unknown
+	sun.rmi.dgc.client.gcInterval = 3600000
+	sun.rmi.dgc.server.gcInterval = 3600000
+	user.country = MX
+	user.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/bin
+	user.home = /home/laishidua
+	user.language = es
+	user.name = laishidua
+	user.timezone = America/Mexico_City
+18:55:05,751 DEBUG [org.jboss.as.config] VM Arguments: -Xms64m -Xmx512m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Dorg.jboss.resolver.warning=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/log/boot.log -Dlogging.configuration=file:/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/configuration/logging.properties -Djboss.home.dir=/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1 -Dfile.encoding=UTF-8 
+18:55:07,349 INFO  [org.xnio] XNIO Version 3.0.3.GA
+18:55:07,350 INFO  [org.jboss.as.server] JBAS015888: Creating http management service using socket-binding (management-http)
+18:55:07,357 INFO  [org.xnio.nio] XNIO NIO Implementation Version 3.0.3.GA
+18:55:07,363 INFO  [org.jboss.remoting] JBoss Remoting version 3.2.3.GA
+18:55:07,394 INFO  [org.jboss.as.logging] JBAS011502: Removing bootstrap log handlers
+18:57:28,846 INFO  [org.jboss.as.logging] JBAS011503: Restored bootstrap log handlers
+18:57:28,847 INFO  [org.apache.coyote.http11.Http11Protocol] Pausando Coyote HTTP/1.1 en puerto http-localhost-127.0.0.1-8080
+18:57:28,847 INFO  [org.apache.coyote.http11.Http11Protocol] Parando Coyote HTTP/1.1 en puerto http-localhost-127.0.0.1-8080
+18:57:28,854 INFO  [org.jboss.as.mail.extension] JBAS015401: Unbound mail session [java:jboss/mail/Default]
+18:57:28,868 INFO  [stdout] 18:57:28,867 INFO  [MSC service thread 1-16][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook
+18:57:28,908 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment portal-compat-hook.war in 74ms
+18:57:28,908 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment marketplace-portlet.war in 75ms
+18:57:30,266 INFO  [hsqldb.db.HSQLDB4075095634.ENGINE] Database closed
+18:57:30,386 INFO  [org.quartz.core.QuartzScheduler] Scheduler PersistedQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutting down.
+18:57:30,389 INFO  [org.quartz.core.QuartzScheduler] Scheduler PersistedQuartzSchedulerEngineInstance_$_NON_CLUSTERED paused.
+18:57:30,392 INFO  [org.quartz.core.QuartzScheduler] Scheduler PersistedQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutdown complete.
+18:57:30,395 INFO  [org.quartz.core.QuartzScheduler] Scheduler MemoryQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutting down.
+18:57:30,398 INFO  [org.quartz.core.QuartzScheduler] Scheduler MemoryQuartzSchedulerEngineInstance_$_NON_CLUSTERED paused.
+18:57:30,402 INFO  [org.quartz.core.QuartzScheduler] Scheduler MemoryQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutdown complete.
+18:57:31,427 INFO  [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/]] Closing Spring root WebApplicationContext
+18:57:32,753 INFO  [com.arjuna.ats.jbossatx] ARJUNA032018: Destroying TransactionManagerService
+18:57:32,755 INFO  [com.arjuna.ats.jbossatx] ARJUNA032014: Stopping transaction recovery manager
+18:57:32,825 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment ROOT.war in 3992ms
+18:57:32,828 INFO  [org.jboss.as] JBAS015950: JBoss AS 7.1.1.Final "Brontes" stopped in 3981ms

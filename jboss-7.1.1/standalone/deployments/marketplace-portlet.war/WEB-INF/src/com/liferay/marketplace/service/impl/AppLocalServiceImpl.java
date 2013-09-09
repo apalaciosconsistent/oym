@@ -1,0 +1,397 @@
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+
+package com.liferay.marketplace.service.impl;
+
+import com.liferay.compat.portal.kernel.util.Time;
+import com.liferay.marketplace.AppVersionException;
+import com.liferay.marketplace.DuplicateAppException;
+import com.liferay.marketplace.model.App;
+import com.liferay.marketplace.model.Module;
+import com.liferay.marketplace.service.base.AppLocalServiceBaseImpl;
+import com.liferay.portal.kernel.deploy.DeployManagerUtil;
+import com.liferay.portal.kernel.deploy.auto.context.AutoDeploymentContext;
+import com.liferay.portal.kernel.exception.PortalException;
+import com.liferay.portal.kernel.exception.SystemException;
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.kernel.util.FileUtil;
+import com.liferay.portal.kernel.util.PropertiesUtil;
+import com.liferay.portal.kernel.util.StreamUtil;
+import com.liferay.portal.kernel.util.StringPool;
+import com.liferay.portal.kernel.util.StringUtil;
+import com.liferay.portal.kernel.util.SystemProperties;
+import com.liferay.portal.kernel.util.Validator;
+import com.liferay.portal.model.CompanyConstants;
+import com.liferay.portal.model.User;
+import com.liferay.portlet.documentlibrary.NoSuchFileException;
+import com.liferay.portlet.documentlibrary.store.DLStoreUtil;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+
+import java.util.Date;
+import java.util.Enumeration;
+import java.util.List;
+import java.util.Properties;
+import java.util.zip.ZipEntry;
+import java.util.zip.ZipException;
+import java.util.zip.ZipFile;
+
+/**
+ * @author Ryan Park
+ */
+public class AppLocalServiceImpl extends AppLocalServiceBaseImpl {
+
+	public App addApp(long userId, long remoteAppId, String version, File file)
+		throws PortalException, SystemException {
+
+		// App
+
+		User user = userPersistence.fetchByPrimaryKey(userId);
+		Date now = new Date();
+
+		validate(remoteAppId, version);
+
+		long appId = counterLocalService.increment();
+
+		App app = appPersistence.create(appId);
+
+		if (user != null) {
+			app.setCompanyId(user.getCompanyId());
+			app.setUserId(user.getUserId());
+			app.setUserName(user.getFullName());
+		}
+
+		app.setCreateDate(now);
+		app.setModifiedDate(now);
+		app.setRemoteAppId(remoteAppId);
+		app.setVersion(version);
+
+		appPersistence.update(app, false);
+
+		// File
+
+		if (file != null) {
+			DLStoreUtil.addFile(
+				app.getCompanyId(), CompanyConstants.SYSTEM, app.getFilePath(),
+				false, file);
+		}
+
+		return app;
+	}
+
+
+	public App deleteApp(App app) throws SystemException {
+
+		// App
+
+		appPersistence.remove(app);
+
+		// Module
+
+		List<Module> modules = modulePersistence.findByAppId(app.getAppId());
+
+		for (Module module : modules) {
+			moduleLocalService.deleteModule(module);
+		}
+
+		// File
+
+		try {
+			DLStoreUtil.deleteFile(
+				app.getCompanyId(), CompanyConstants.SYSTEM, app.getFilePath());
+		}
+		catch (Exception e) {
+			if (_log.isWarnEnabled()) {
+				_log.warn(e, e);
+			}
+		}
+
+		return app;
+	}
+
+
+	public App deleteApp(long appId) throws PortalException, SystemException {
+		App app = appPersistence.findByPrimaryKey(appId);
+
+		return deleteApp(app);
+	}
+
+	public App fetchRemoteApp(long remoteAppId) throws SystemException {
+		return appPersistence.fetchByRemoteAppId(remoteAppId);
+	}
+
+	public void installApp(long remoteAppId)
+		throws PortalException, SystemException {
+
+		App app = appPersistence.findByRemoteAppId(remoteAppId);
+
+		if (!DLStoreUtil.hasFile(
+				app.getCompanyId(), CompanyConstants.SYSTEM,
+				app.getFilePath())) {
+
+			throw new NoSuchFileException();
+		}
+
+		String tmpDir =
+			SystemProperties.get(SystemProperties.TMP_DIR) + StringPool.SLASH +
+				Time.getTimestamp();
+
+		InputStream inputStream = null;
+
+		ZipFile zipFile = null;
+
+		try {
+			inputStream = DLStoreUtil.getFileAsStream(
+				app.getCompanyId(), CompanyConstants.SYSTEM, app.getFilePath());
+
+			if (inputStream == null) {
+				throw new IOException(
+					"Unable to open file at " + app.getFilePath());
+			}
+
+			File liferayPackageFile = FileUtil.createTempFile(inputStream);
+
+			zipFile = new ZipFile(liferayPackageFile);
+
+			Enumeration<ZipEntry> enu =
+				(Enumeration<ZipEntry>)zipFile.entries();
+
+			while (enu.hasMoreElements()) {
+				ZipEntry zipEntry = enu.nextElement();
+
+				AutoDeploymentContext autoDeploymentContext =
+					new AutoDeploymentContext();
+
+				String fileName = zipEntry.getName();
+
+				if (!fileName.endsWith(".war") &&
+					!fileName.endsWith(".xml") &&
+					!fileName.endsWith(".zip") &&
+					!fileName.equals("liferay-marketplace.properties")) {
+
+					continue;
+				}
+
+				String contextName = getContextName(fileName);
+
+				autoDeploymentContext.setContext(contextName);
+
+				if (_log.isInfoEnabled()) {
+					_log.info(
+						"Extracting " + fileName + " from app " +
+							app.getAppId());
+				}
+
+				InputStream zipInputStream = null;
+
+				try {
+					zipInputStream = zipFile.getInputStream(zipEntry);
+
+					if (fileName.equals("liferay-marketplace.properties")) {
+						String propertiesString = StringUtil.read(
+							zipInputStream);
+
+						Properties properties = PropertiesUtil.load(
+							propertiesString);
+
+						processMarketplaceProperties(properties);
+					}
+					else {
+						File pluginPackageFile = new File(
+							tmpDir + StringPool.SLASH + fileName);
+
+						FileUtil.write(pluginPackageFile, zipInputStream);
+
+						autoDeploymentContext.setFile(pluginPackageFile);
+
+						DeployManagerUtil.deploy(autoDeploymentContext);
+
+						moduleLocalService.addModule(
+							app.getUserId(), app.getAppId(), contextName);
+					}
+				}
+				finally {
+					StreamUtil.cleanUp(zipInputStream);
+				}
+			}
+		}
+		catch (ZipException ze) {
+			if (_log.isInfoEnabled()) {
+				_log.info(
+					"Deleting corrupt package from app " + app.getAppId(), ze);
+			}
+
+			deleteApp(app);
+		}
+		catch (IOException ioe) {
+			throw new PortalException(ioe.getMessage());
+		}
+		catch (Exception e) {
+			_log.error(e, e);
+		}
+		finally {
+			FileUtil.deltree(tmpDir);
+
+			if (zipFile != null) {
+				try {
+					zipFile.close();
+				}
+				catch (IOException ioe) {
+				}
+			}
+
+			StreamUtil.cleanUp(inputStream);
+		}
+	}
+
+	public void processMarketplaceProperties(Properties properties)
+		throws PortalException, SystemException {
+
+		long[] supersedesRemoteAppIds = StringUtil.split(
+			properties.getProperty("supersedes-remote-app-ids"), 0L);
+
+		for (long supersedesRemoteAppId : supersedesRemoteAppIds) {
+			App supersedesApp = appPersistence.fetchByRemoteAppId(
+				supersedesRemoteAppId);
+
+			if ((supersedesApp != null) && supersedesApp.isInstalled()) {
+				uninstallApp(supersedesRemoteAppId);
+			}
+		}
+	}
+
+	public void uninstallApp(long remoteAppId)
+		throws PortalException, SystemException {
+
+		App app = appPersistence.findByRemoteAppId(remoteAppId);
+
+		List<Module> modules = modulePersistence.findByAppId(app.getAppId());
+
+		for (Module module : modules) {
+			moduleLocalService.deleteModule(module.getModuleId());
+
+			if (hasDependentApp(module)) {
+				continue;
+			}
+
+			try {
+				DeployManagerUtil.undeploy(module.getContextName());
+			}
+			catch (Exception e) {
+				_log.error(e, e);
+			}
+		}
+	}
+
+	public App updateApp(long appId, String version, File file)
+		throws PortalException, SystemException {
+
+		// App
+
+		validate(0, version);
+
+		App app = appPersistence.findByPrimaryKey(appId);
+
+		app.setModifiedDate(new Date());
+		app.setVersion(version);
+
+		appPersistence.update(app, false);
+
+		// File
+
+		if (file != null) {
+			try {
+				DLStoreUtil.deleteFile(
+					app.getCompanyId(), CompanyConstants.SYSTEM,
+					app.getFilePath());
+			}
+			catch (Exception e) {
+			}
+
+			DLStoreUtil.addFile(
+				app.getCompanyId(), CompanyConstants.SYSTEM, app.getFilePath(),
+				false, file);
+		}
+
+		return app;
+	}
+
+	protected String getContextName(String fileName) {
+		String context = fileName;
+
+		while (context.contains(StringPool.DASH)) {
+			if (context.endsWith("-ext") || context.endsWith("-hook") ||
+				context.endsWith("-layouttpl") ||
+				context.endsWith("-portlet") || context.endsWith("-theme") ||
+				context.endsWith("-web")) {
+
+				return context;
+			}
+
+			int pos = context.lastIndexOf(StringPool.DASH);
+
+			if (pos > 0) {
+				context = context.substring(0, pos);
+			}
+			else {
+				break;
+			}
+		}
+
+		return fileName;
+	}
+
+	protected boolean hasDependentApp(Module module)
+		throws PortalException, SystemException {
+
+		List<Module> modules = modulePersistence.findByContextName(
+			module.getContextName());
+
+		for (Module curModule : modules) {
+			App app = appPersistence.findByPrimaryKey(curModule.getAppId());
+
+			if (curModule.getAppId() == module.getAppId()) {
+				continue;
+			}
+
+			if (app.isInstalled()) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	protected void validate(long remoteAppId, String version)
+		throws PortalException, SystemException {
+
+		if (Validator.isNull(version)) {
+			throw new AppVersionException();
+		}
+
+		if (remoteAppId > 0) {
+			App app = appPersistence.fetchByRemoteAppId(remoteAppId);
+
+			if (app != null) {
+				throw new DuplicateAppException();
+			}
+		}
+	}
+
+	private static Log _log = LogFactoryUtil.getLog(AppLocalServiceImpl.class);
+
+}

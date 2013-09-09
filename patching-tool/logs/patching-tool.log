@@ -1,0 +1,51 @@
+12 Aug 2013 17:37:33,248 DEBUG [a:?] Log4j has been initialized.
+12 Aug 2013 17:37:33,252 INFO  [b:?] Directory is not set in command line, using ../
+12 Aug 2013 17:37:33,252 INFO  [b:?] Auto discovery looks for portal segments. The selected directory is "../".
+12 Aug 2013 17:37:36,939 DEBUG [b:?] The WEB-INF/lib/portal-impl.jar has been detected for patching.
+12 Aug 2013 17:37:36,939 DEBUG [b:?] The portal-service.jar has been detected for patching.
+12 Aug 2013 17:37:36,940 INFO  [b:?] The system found more possible locations. Please include only one line per property in your configuration. If you need to patch more Liferay instances, please use profiles.
+12 Aug 2013 17:37:36,940 WARN  [b:?] The configuration hasn't been saved. Please save this to the default.properties file:
+12 Aug 2013 17:37:36,941 WARN  [b:?] patching.mode=binary
+jdk.version=jdk6
+war.path=../jboss-7.1.1/standalone/deployments/ROOT.war/
+war.path=../tomcat-6.0.35/webapps/ROOT/
+war.path=../jonas-5.2.3/deploy/liferay-portal/
+war.path=../tomcat-7.0.40/webapps/ROOT/
+war.path=../geronimo-2.2.1/deploy/liferay-portal/
+war.path=../resin-4.0.33/webapps/ROOT/
+war.path=../6.1.x/jboss-7.1.1/standalone/deployments/ROOT.war/
+war.path=../6.1.x/jonas-5.2.3/deploy/liferay-portal/
+war.path=../6.1.x/tomcat-7.0.40/webapps/ROOT/
+war.path=../6.1.x/geronimo-2.2.1/deploy/liferay-portal/
+war.path=../6.1.x/resin-4.0.33/webapps/ROOT/
+war.path=../6.1.x/jetty-8.1.10/webapps/root/
+war.path=../jetty-8.1.10/webapps/root/
+war.path=../ee-6.1.x/jboss-7.1.1/standalone/deployments/ROOT.war/
+war.path=../ee-6.1.x/tomcat-6.0.35/webapps/ROOT/
+global.lib.path=../glassfish-3.1.2.2/domains/domain1/lib/
+global.lib.path=../jboss-7.1.1/modules/com/liferay/portal/main/
+global.lib.path=../tomcat-6.0.35/lib/ext/
+global.lib.path=../jonas-5.2.3/lib/ext/
+global.lib.path=../tomcat-7.0.40/lib/ext/
+global.lib.path=../geronimo-2.2.1/var/shared/lib/
+global.lib.path=../tcat-6.4.5/admin/lib/ext/
+global.lib.path=../tcat-6.4.5/agent/lib/ext/
+global.lib.path=../tcat-6.4.5/profile/files/lib/ext/
+global.lib.path=../resin-4.0.33/ext-lib/
+global.lib.path=../6.1.x/glassfish-3.1.2.2/domains/domain1/lib/
+global.lib.path=../6.1.x/jboss-7.1.1/modules/com/liferay/portal/main/
+global.lib.path=../6.1.x/jonas-5.2.3/lib/ext/
+global.lib.path=../6.1.x/tomcat-7.0.40/lib/ext/
+global.lib.path=../6.1.x/geronimo-2.2.1/var/shared/lib/
+global.lib.path=../6.1.x/resin-4.0.33/ext-lib/
+global.lib.path=../6.1.x/jetty-8.1.10/lib/ext/liferay/
+global.lib.path=../jetty-8.1.10/lib/ext/liferay/
+global.lib.path=../ee-6.1.x/glassfish-3.1.2.2/domains/domain1/lib/
+global.lib.path=../ee-6.1.x/jboss-7.1.1/modules/com/liferay/portal/main/
+global.lib.path=../ee-6.1.x/tomcat-6.0.35/lib/ext/
+global.lib.path=../ee-6.1.x/tcat-6.4.5/admin/lib/ext/
+global.lib.path=../ee-6.1.x/tcat-6.4.5/agent/lib/ext/
+global.lib.path=../ee-6.1.x/tcat-6.4.5/profile/files/lib/ext/
+
+12 Aug 2013 17:37:36,941 WARN  [b:?] The configuration hasn't been saved. Please save this to the default.properties file.
+12 Aug 2013 17:37:36,966 DEBUG [Patcher:?] The 'auto-discovery' command has failed.

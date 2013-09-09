@@ -1,0 +1,37 @@
+/* ---------- RTL ---------- */
+.rtl .aui-field-label {
+  text-align: right; }
+.rtl .aui-tab {
+  float: right; }
+.rtl .aui-tree-container {
+  margin-left: 0;
+  margin-right: 20px; }
+.rtl .aui-tree-hitarea, .rtl .aui-tree-icon {
+  float: right; }
+.rtl .aui-toolbar-first {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
+  -webkit-border-top-right-radius: 4px;
+  border-top-right-radius: 4px; }
+.rtl .aui-toolbar-last {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -webkit-border-top-left-radius: 4px;
+  border-top-left-radius: 4px; }
+.rtl .aui-rating-element {
+  float: right; }
+

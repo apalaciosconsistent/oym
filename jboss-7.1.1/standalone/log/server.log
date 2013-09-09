@@ -1,0 +1,181 @@
+18:55:07,397 INFO  [org.jboss.as.configadmin] (ServerService Thread Pool -- 26) JBAS016200: Activating ConfigAdmin Subsystem
+18:55:07,404 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+18:55:07,407 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 38) JBAS011800: Activating Naming Subsystem
+18:55:07,415 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013101: Activating Security Subsystem
+18:55:07,420 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+18:55:07,421 INFO  [org.jboss.as.connector] (MSC service thread 1-8) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+18:55:07,424 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 39) JBAS011940: Activating OSGi Subsystem
+18:55:07,425 INFO  [org.jboss.as.naming] (MSC service thread 1-7) JBAS011802: Starting Naming Service
+18:55:07,429 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-14) JBAS015400: Bound mail session [java:jboss/mail/Default]
+18:55:07,440 INFO  [org.jboss.as.security] (MSC service thread 1-15) JBAS013100: Current PicketBox version=4.0.7.Final
+18:55:07,658 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+18:55:08,026 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-10) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+18:55:08,135 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-16) Arrancando Coyote HTTP/1.1 en puerto http-localhost-127.0.0.1-8080
+18:55:08,343 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-2) JBoss Web Services - Stack CXF Server 4.0.2.GA
+18:55:08,519 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-15) JBAS015012: Started FileSystemDeploymentService for directory /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments
+18:55:08,521 INFO  [org.jboss.as.remoting] (MSC service thread 1-16) JBAS017100: Listening on localhost/127.0.0.1:4447
+18:55:08,521 INFO  [org.jboss.as.remoting] (MSC service thread 1-7) JBAS017100: Listening on /127.0.0.1:9999
+18:55:08,880 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015951: Admin console listening on http://127.0.0.1:9990
+18:55:08,881 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015874: JBoss AS 7.1.1.Final "Brontes" started in 3995ms - Started 133 of 208 services (74 services are passive or on-demand)
+18:55:08,951 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found portal-compat-hook.war in deployment directory. To trigger deployment create a file called portal-compat-hook.war.dodeploy
+18:55:08,951 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found ROOT.war in deployment directory. To trigger deployment create a file called ROOT.war.dodeploy
+18:55:08,952 INFO  [org.jboss.as.server.deployment.scanner] (DeploymentScanner-threads - 1) JBAS015003: Found marketplace-portlet.war in deployment directory. To trigger deployment create a file called marketplace-portlet.war.dodeploy
+18:55:08,983 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-10) JBAS015876: Starting deployment of "marketplace-portlet.war"
+18:55:08,983 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Starting deployment of "ROOT.war"
+18:55:08,983 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-1) JBAS015876: Starting deployment of "portal-compat-hook.war"
+18:55:11,296 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (MSC service thread 1-7) Inicializando Mojarra 2.1.7-jbossorg-1 (20120227-1401) para el contexto '/portal-compat-hook'
+18:55:11,297 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (MSC service thread 1-3) Inicializando Mojarra 2.1.7-jbossorg-1 (20120227-1401) para el contexto '/marketplace-portlet'
+18:55:12,550 INFO  [org.hibernate.validator.util.Version] (MSC service thread 1-3) Hibernate Validator 4.2.0.Final
+18:55:12,784 INFO  [org.jboss.web] (MSC service thread 1-3) JBAS018210: Registering web context: /marketplace-portlet
+18:55:12,784 INFO  [org.jboss.web] (MSC service thread 1-7) JBAS018210: Registering web context: /portal-compat-hook
+18:55:19,016 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry lib/ant.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/truezip.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,016 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry lib/lcrypto-jdk14-135.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/truezip.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,019 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry gt-api-2.6.1.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,020 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jts-1.10.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,020 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry gt-referencing-2.6.1.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,021 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry vecmath-1.3.2.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,022 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry commons-pool-1.5.3.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,023 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry gt-metadata-2.6.1.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,024 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry geoapi-2.3-M1.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,025 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jsr-275-1.0-beta-2.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,025 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry geoapi-pending-2.3-M1.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,026 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry gt-main-2.6.1.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,027 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jdom-1.0.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,028 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry commons-beanutils-1.7.0.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,029 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry commons-logging-1.1.1.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-coverage.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,031 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry unoloader.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jurt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,031 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry ../../lib/ in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jurt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,032 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry ../bin/ in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jurt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,035 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry commons-cli.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/xuggle-xuggler-noarch.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,036 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry logback-classic.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/xuggle-xuggler-noarch.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,036 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry logback-core.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/xuggle-xuggler-noarch.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,038 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry vecmath-1.3.2.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-metadata.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,039 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry geoapi-2.3-M1.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-metadata.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,039 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jsr-275-1.0-beta-2.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-metadata.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,040 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry geoapi-pending-2.3-M1.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/gt-metadata.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,041 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jaxb-api.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxb-impl.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,042 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry activation.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxb-impl.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,042 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jsr173_1.0_api.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxb-impl.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,043 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jaxb1-impl.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxb-impl.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,045 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry activation.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/saaj-impl.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,047 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jaxp-api.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/saaj-api.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,047 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jax-qname.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/saaj-api.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,048 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry activation.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/saaj-api.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,048 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry servlet.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/saaj-api.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,049 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry asm-3.3.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/asm-xml.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,050 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry asm-util-3.3.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/asm-xml.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,050 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry asm-attrs-3.3.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/asm-xml.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,055 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jaxws-api.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxws-rt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,055 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jsr181-api.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxws-rt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,056 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jsr250-api.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxws-rt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,056 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jsr173_api.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxws-rt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,057 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry sjsxp.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxws-rt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,058 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry woodstox.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxws-rt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,058 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry resolver.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxws-rt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,059 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry jaxb-api.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxws-rt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,059 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry activation.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxws-rt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,060 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-6) Class Path entry stax-utils.jar in "/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/jaxws-rt.jar"  does not point to a valid jar for a Class-Path reference.
+18:55:19,287 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'DRIVER=TRUE' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,288 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'DEFAULT=ear|jar|war|zip' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,288 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'zip=de.schlichtherle.io.archive.zip.ZipDriver' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,289 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'ear|jar|war=de.schlichtherle.io.archive.zip.JarDriver' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,290 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'odg|odp|ods|odt=de.schlichtherle.io.archive.zip.OdfDriver' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,290 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'otg|otp|ots|ott=de.schlichtherle.io.archive.zip.OdfDriver' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,291 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'odb|odf|odm|oth=de.schlichtherle.io.archive.zip.OdfDriver' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,291 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'exe=de.schlichtherle.io.archive.zip.ReadOnlySfxDriver' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,292 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'tzp|zip.rae|zip.raes=de.schlichtherle.io.archive.zip.raes.SafeZipRaesDriver' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,293 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'tar=de.schlichtherle.io.archive.tar.TarDriver' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,293 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'tgz|tar.gz=de.schlichtherle.io.archive.tar.TarGZipDriver' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,294 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'tbz2|tar.bz2=de.schlichtherle.io.archive.tar.TarBZip2Driver' for service type 'de.schlichtherle.io.registry.properties'
+18:55:19,298 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'org.xmlpull.mxp1.MXParser,org.xmlpull.mxp1_serializer.MXSerializer' for service type 'org.xmlpull.v1.XmlPullParserFactory'
+18:55:19,299 WARN  [org.jboss.as.server.deployment] (MSC service thread 1-14) JBAS015893: Encountered invalid class name 'org.kxml2.io.KXmlParser,org.kxml2.io.KXmlSerializer' for service type 'org.xmlpull.v1.XmlPullParserFactory'
+18:55:20,341 INFO  [stdout] (MSC service thread 1-8) Loading vfs:/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/portal-impl.jar/system.properties
+18:55:20,377 INFO  [com.liferay.portal.kernel.util.ServerDetector] (MSC service thread 1-8) Detected server jboss
+18:55:20,385 INFO  [com.liferay.portal.util.PropsUtil] (MSC service thread 1-8) Global shared lib directory /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/modules/javax/servlet/api/main/
+18:55:20,385 INFO  [com.liferay.portal.util.PropsUtil] (MSC service thread 1-8) Global lib directory /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/modules/com/liferay/portal/main/
+18:55:20,386 INFO  [com.liferay.portal.util.PropsUtil] (MSC service thread 1-8) Portal lib directory /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/
+18:55:20,608 INFO  [com.liferay.portal.configuration.easyconf.ClassLoaderComponentConfiguration] (MSC service thread 1-8) Properties for portal loaded from [vfs:/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/portal-impl.jar/portal.properties]
+18:55:20,609 INFO  [stdout] (MSC service thread 1-8) Loading vfs:/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/deployments/ROOT.war/WEB-INF/lib/portal-impl.jar/portal.properties
+18:55:21,062 INFO  [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/]] (MSC service thread 1-8) Initializing Spring root WebApplicationContext
+18:55:25,049 INFO  [stdout] (MSC service thread 1-8) 18:55:25,047 INFO  [MSC service thread 1-8][DialectDetector:71] Determine dialect for HSQL Database Engine 2
+18:55:25,050 INFO  [stdout] (MSC service thread 1-8) 18:55:25,050 WARN  [MSC service thread 1-8][DialectDetector:86] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demo'ing purposes. The database settings can be changed in portal-ext.properties.
+18:55:25,071 INFO  [stdout] (MSC service thread 1-8) 18:55:25,070 INFO  [MSC service thread 1-8][DialectDetector:136] Found dialect org.hibernate.dialect.HSQLDialect
+18:55:27,687 WARN  [net.sf.ehcache.Cache] (MSC service thread 1-8) Cache: com.liferay.portal.service.impl.PortletLocalServiceImpl has a maxElementsInMemory of 0.  In Ehcache 2.0 this has been changed to mean a store with no capacity limit. Set it to 1 if you want no elements cached in memory
+18:55:35,317 INFO  [stdout] (MSC service thread 1-8) 18:55:35,316 WARN  [MSC service thread 1-8][PDFProcessorImpl:235] Liferay is not configured to use ImageMagick. For better quality document and image previews, install ImageMagick and enable it in portal-ext.properties or in the Server Administration control panel at: http://<server>/group/control_panel/manage/-/server/external-services
+18:55:36,069 INFO  [org.quartz.impl.StdSchedulerFactory] (MSC service thread 1-8) Using default implementation for ThreadExecutor
+18:55:36,085 INFO  [org.quartz.core.SchedulerSignalerImpl] (MSC service thread 1-8) Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+18:55:36,086 INFO  [org.quartz.core.QuartzScheduler] (MSC service thread 1-8) Quartz Scheduler v.2.1.6 created.
+18:55:36,088 INFO  [org.quartz.core.QuartzScheduler] (MSC service thread 1-8) Scheduler meta-data: Quartz Scheduler (v2.1.6) 'PersistedQuartzSchedulerEngineInstance' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'com.liferay.portal.scheduler.quartz.PortalJobStore' - which supports persistence. and is not clustered.
+
+18:55:36,089 INFO  [org.quartz.impl.StdSchedulerFactory] (MSC service thread 1-8) Quartz scheduler 'PersistedQuartzSchedulerEngineInstance' initialized from an externally provided properties instance.
+18:55:36,090 INFO  [org.quartz.impl.StdSchedulerFactory] (MSC service thread 1-8) Quartz scheduler version: 2.1.6
+18:55:36,099 INFO  [org.quartz.impl.StdSchedulerFactory] (MSC service thread 1-8) Using default implementation for ThreadExecutor
+18:55:36,101 INFO  [org.quartz.core.SchedulerSignalerImpl] (MSC service thread 1-8) Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+18:55:36,101 INFO  [org.quartz.core.QuartzScheduler] (MSC service thread 1-8) Quartz Scheduler v.2.1.6 created.
+18:55:36,102 INFO  [org.quartz.simpl.RAMJobStore] (MSC service thread 1-8) RAMJobStore initialized.
+18:55:36,102 INFO  [org.quartz.core.QuartzScheduler] (MSC service thread 1-8) Scheduler meta-data: Quartz Scheduler (v2.1.6) 'MemoryQuartzSchedulerEngineInstance' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 5 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+18:55:36,103 INFO  [org.quartz.impl.StdSchedulerFactory] (MSC service thread 1-8) Quartz scheduler 'MemoryQuartzSchedulerEngineInstance' initialized from an externally provided properties instance.
+18:55:36,103 INFO  [org.quartz.impl.StdSchedulerFactory] (MSC service thread 1-8) Quartz scheduler version: 2.1.6
+18:55:37,881 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (MSC service thread 1-8) Inicializando Mojarra 2.1.7-jbossorg-1 (20120227-1401) para el contexto ''
+18:55:39,476 INFO  [org.apache.struts.tiles.TilesPlugin] (MSC service thread 1-8) Tiles definition factory loaded for module ''.
+18:55:39,893 INFO  [stdout] (MSC service thread 1-8) Starting Liferay Portal Enterprise Edition 6.1.30 EE (Paton / Build 6130 / August 16, 2013)
+18:55:40,321 INFO  [stdout] (MSC service thread 1-8) 18:55:40,320 INFO  [MSC service thread 1-8][BaseDB:478] Database supports case sensitive queries
+18:55:40,876 INFO  [stdout] (MSC service thread 1-8) 18:55:40,876 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyProcessSuite
+18:55:40,878 INFO  [stdout] (MSC service thread 1-8) 18:55:40,878 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyProperties
+18:55:40,928 INFO  [stdout] (MSC service thread 1-8) 18:55:40,928 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyDB2
+18:55:40,929 INFO  [stdout] (MSC service thread 1-8) 18:55:40,929 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyMySQL
+18:55:40,930 INFO  [stdout] (MSC service thread 1-8) 18:55:40,930 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyOracle
+18:55:40,931 INFO  [stdout] (MSC service thread 1-8) 18:55:40,931 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifySQLServer
+18:55:40,932 INFO  [stdout] (MSC service thread 1-8) 18:55:40,931 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyCounter
+18:55:40,941 INFO  [stdout] (MSC service thread 1-8) 18:55:40,941 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyUUID
+18:55:40,953 INFO  [stdout] (MSC service thread 1-8) 18:55:40,953 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyPermission
+18:55:41,942 INFO  [stdout] (MSC service thread 1-8) 18:55:41,941 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyRole
+18:55:42,099 INFO  [stdout] (MSC service thread 1-8) 18:55:42,098 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyAsset
+18:55:42,102 INFO  [stdout] (MSC service thread 1-8) 18:55:42,102 INFO  [MSC service thread 1-8][UpgradeProcess:175] Upgrading com.liferay.portal.upgrade.util.UpgradeAssetPublisherManualEntries
+18:55:42,106 INFO  [stdout] (MSC service thread 1-8) 18:55:42,105 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyBlogs
+18:55:42,109 INFO  [stdout] (MSC service thread 1-8) 18:55:42,109 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyBookmarks
+18:55:42,115 INFO  [stdout] (MSC service thread 1-8) 18:55:42,115 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyCalendar
+18:55:42,120 INFO  [stdout] (MSC service thread 1-8) 18:55:42,119 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyDocumentLibrary
+18:55:42,144 INFO  [stdout] (MSC service thread 1-8) 18:55:42,144 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyGroup
+18:55:42,544 INFO  [stdout] (MSC service thread 1-8) 18:55:42,544 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyJournal
+18:55:42,555 INFO  [stdout] (MSC service thread 1-8) 18:55:42,555 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyLayout
+18:55:42,565 INFO  [stdout] (MSC service thread 1-8) 18:55:42,565 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyMessageBoards
+18:55:42,574 INFO  [stdout] (MSC service thread 1-8) 18:55:42,573 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyOrganization
+18:55:42,606 INFO  [stdout] (MSC service thread 1-8) 18:55:42,606 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyResourcePermissions
+18:55:43,401 INFO  [stdout] (MSC service thread 1-8) 18:55:43,401 INFO  [MSC service thread 1-8][VerifyResourcePermissions:176] Processed 100 resource permissions for com.liferay.portal.model.User
+18:55:43,936 INFO  [stdout] (MSC service thread 1-8) 18:55:43,936 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifySocial
+18:55:43,937 INFO  [stdout] (MSC service thread 1-8) 18:55:43,937 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyUser
+18:55:43,954 INFO  [stdout] (MSC service thread 1-8) 18:55:43,954 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyWiki
+18:55:43,958 INFO  [stdout] (MSC service thread 1-8) 18:55:43,957 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyWorkflow
+18:55:44,002 INFO  [stdout] (MSC service thread 1-8) 18:55:44,001 INFO  [MSC service thread 1-8][LicenseManager:?] Failed to find directory /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/data/license
+18:55:44,002 INFO  [stdout] (MSC service thread 1-8) 18:55:44,002 ERROR [MSC service thread 1-8][LicenseManager:?] No binary licenses found
+18:55:44,597 INFO  [stdout] (MSC service thread 1-8) 18:55:44,597 INFO  [MSC service thread 1-8][ServerDetector:169] Server supports hot deploy
+18:55:44,601 INFO  [stdout] (MSC service thread 1-8) 18:55:44,601 INFO  [MSC service thread 1-8][PluginPackageUtil:1046] Reading plugin package for the root context
+18:55:49,286 INFO  [stdout] (MSC service thread 1-8) 18:55:49,285 INFO  [MSC service thread 1-8][AutoDeployDir:123] Creating missing directory /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy
+18:55:49,287 INFO  [stdout] (MSC service thread 1-8) 18:55:49,287 INFO  [MSC service thread 1-8][AutoDeployDir:144] Auto deploy scanner started for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy
+18:55:49,322 INFO  [org.jamwiki.Environment] (MSC service thread 1-8) Loading properties from /tmp/gDGYJf7NarQFaldqnFTR2809471687995035600.tmp
+18:55:54,283 INFO  [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/]] (MSC service thread 1-8) Initializing Spring FrameworkServlet 'Remoting Servlet'
+18:55:57,066 INFO  [org.jboss.web] (MSC service thread 1-8) JBAS018210: Registering web context: 
+18:55:57,256 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018559: Deployed "ROOT.war"
+18:55:57,257 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018559: Deployed "portal-compat-hook.war"
+18:55:57,257 INFO  [org.jboss.as.server] (DeploymentScanner-threads - 2) JBAS018559: Deployed "marketplace-portlet.war"
+18:55:58,852 INFO  [org.apache.struts.tiles.TilesRequestProcessor] (http-localhost-127.0.0.1-8080-1) Tiles definition factory found for request processor ''.
+18:55:58,947 INFO  [org.apache.struts.tiles.TilesRequestProcessor] (http-localhost-127.0.0.1-8080-2) Tiles definition factory found for request processor ''.
+18:56:32,291 INFO  [stdout] (com.liferay.portal.kernel.deploy.auto.AutoDeployScanner) 18:56:32,290 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing license-portaldevelopment-developer-6.1ga3-consistentdeveloper.xml
+18:56:32,300 INFO  [stdout] (com.liferay.portal.kernel.deploy.auto.AutoDeployScanner) 18:56:32,300 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LicenseAutoDeployListener:?] Copying license for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/license-portaldevelopment-developer-6.1ga3-consistentdeveloper.xml
+18:56:32,314 INFO  [stdout] (com.liferay.portal.kernel.deploy.auto.AutoDeployScanner) 18:56:32,314 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LicenseManager:?] Portal Development license validation passed
+18:56:32,315 INFO  [stdout] (com.liferay.portal.kernel.deploy.auto.AutoDeployScanner) 18:56:32,315 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LicenseDeployer:?] License registered
+18:57:28,832 INFO  [org.jboss.as.osgi] (MSC service thread 1-9) JBAS011942: Stopping OSGi Framework

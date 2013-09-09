@@ -1,0 +1,79 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<c:choose>
+	<c:when test="<%= results.isEmpty() %>">
+		<liferay-ui:message key="there-are-no-blogs" />
+
+		<br /><br />
+	</c:when>
+	<c:otherwise>
+
+		<%
+		for (int i = 0; i < results.size(); i++) {
+			BlogsEntry entry = (BlogsEntry)results.get(i);
+
+			if (entry.getDisplayDate().after(new Date())) {
+				searchContainer.setTotal(searchContainer.getTotal() - 1);
+
+				continue;
+			}
+		%>
+
+			<%@ include file="/html/portlet/blogs_aggregator/view_entry_content.jspf" %>
+
+		<%
+		}
+		%>
+
+	</c:otherwise>
+</c:choose>
+
+<c:if test="<%= enableRssSubscription %>">
+
+	<%
+	StringBundler rssURLParams = new StringBundler();
+
+	if (selectionMethod.equals("users")) {
+		if (organizationId > 0) {
+			rssURLParams.append("&organizationId=");
+			rssURLParams.append(organizationId);
+		}
+		else {
+			rssURLParams.append("&companyId=");
+			rssURLParams.append(company.getCompanyId());
+		}
+	}
+	else {
+		rssURLParams.append("&groupId=");
+		rssURLParams.append(themeDisplay.getScopeGroupId());
+	}
+	%>
+
+	<liferay-ui:icon
+		image="rss"
+		label="<%= true %>"
+		method="get"
+		target="_blank"
+		url='<%= themeDisplay.getPathMain() + "/blogs_aggregator/rss?p_l_id=" + plid + rssURLParams %>'
+	/>
+</c:if>
+
+<c:if test="<%= !results.isEmpty() %>">
+	<div class="search-container">
+		<liferay-ui:search-paginator searchContainer="<%= searchContainer %>" />
+	</div>
+</c:if>

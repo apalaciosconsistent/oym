@@ -1,0 +1,63 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<%
+String tabs2 = ParamUtil.getString(request, "tabs2", "pending");
+
+PortletURL portletURL = renderResponse.createRenderURL();
+
+portletURL.setParameter("tabs1", "submissions");
+portletURL.setParameter("tabs2", tabs2);
+%>
+
+<liferay-ui:tabs
+	names="pending,completed"
+	param="tabs2"
+	portletURL="<%= portletURL %>"
+/>
+
+<%
+try {
+	boolean completedInstances = true;
+
+	if (tabs2.equals("pending")) {
+		completedInstances = false;
+	}
+%>
+
+	<%@ include file="/html/portlet/workflow_instances/workflow_instances.jspf" %>
+
+<%
+}
+catch (Exception e) {
+	if (_log.isWarnEnabled()) {
+		_log.warn("Error retrieving workflow instances", e);
+	}
+%>
+
+	<div class="portlet-msg-error">
+		<liferay-ui:message key="an-error-occurred-while-retrieving-the-list-of-instances" />
+	</div>
+
+<%
+}
+
+PortalUtil.addPortletBreadcrumbEntry(request, LanguageUtil.get(pageContext, tabs2), currentURL);
+%>
+
+<%!
+private static Log _log = LogFactoryUtil.getLog("portal-web.docroot.html.portlet.workflow_instances.view_workflow_instances_jspf");
+%>

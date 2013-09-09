@@ -1,0 +1,43 @@
+18:55:25,047 INFO  [MSC service thread 1-8][DialectDetector:71] Determine dialect for HSQL Database Engine 2
+18:55:25,050 WARN  [MSC service thread 1-8][DialectDetector:86] Liferay is configured to use Hypersonic as its database. Do NOT use Hypersonic in production. Hypersonic is an embedded database useful for development and demo'ing purposes. The database settings can be changed in portal-ext.properties.
+18:55:25,070 INFO  [MSC service thread 1-8][DialectDetector:136] Found dialect org.hibernate.dialect.HSQLDialect
+18:55:35,316 WARN  [MSC service thread 1-8][PDFProcessorImpl:235] Liferay is not configured to use ImageMagick. For better quality document and image previews, install ImageMagick and enable it in portal-ext.properties or in the Server Administration control panel at: http://<server>/group/control_panel/manage/-/server/external-services
+18:55:40,320 INFO  [MSC service thread 1-8][BaseDB:478] Database supports case sensitive queries
+18:55:40,876 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyProcessSuite
+18:55:40,878 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyProperties
+18:55:40,928 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyDB2
+18:55:40,929 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyMySQL
+18:55:40,930 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyOracle
+18:55:40,931 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifySQLServer
+18:55:40,931 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyCounter
+18:55:40,941 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyUUID
+18:55:40,953 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyPermission
+18:55:41,941 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyRole
+18:55:42,098 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyAsset
+18:55:42,102 INFO  [MSC service thread 1-8][UpgradeProcess:175] Upgrading com.liferay.portal.upgrade.util.UpgradeAssetPublisherManualEntries
+18:55:42,105 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyBlogs
+18:55:42,109 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyBookmarks
+18:55:42,115 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyCalendar
+18:55:42,119 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyDocumentLibrary
+18:55:42,144 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyGroup
+18:55:42,544 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyJournal
+18:55:42,555 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyLayout
+18:55:42,565 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyMessageBoards
+18:55:42,573 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyOrganization
+18:55:42,606 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyResourcePermissions
+18:55:43,401 INFO  [MSC service thread 1-8][VerifyResourcePermissions:176] Processed 100 resource permissions for com.liferay.portal.model.User
+18:55:43,936 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifySocial
+18:55:43,937 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyUser
+18:55:43,954 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyWiki
+18:55:43,957 INFO  [MSC service thread 1-8][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyWorkflow
+18:55:44,001 INFO  [MSC service thread 1-8][LicenseManager:?] Failed to find directory /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/data/license
+18:55:44,002 ERROR [MSC service thread 1-8][LicenseManager:?] No binary licenses found
+18:55:44,597 INFO  [MSC service thread 1-8][ServerDetector:169] Server supports hot deploy
+18:55:44,601 INFO  [MSC service thread 1-8][PluginPackageUtil:1046] Reading plugin package for the root context
+18:55:49,285 INFO  [MSC service thread 1-8][AutoDeployDir:123] Creating missing directory /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy
+18:55:49,287 INFO  [MSC service thread 1-8][AutoDeployDir:144] Auto deploy scanner started for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy
+18:56:32,290 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing license-portaldevelopment-developer-6.1ga3-consistentdeveloper.xml
+18:56:32,300 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LicenseAutoDeployListener:?] Copying license for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/license-portaldevelopment-developer-6.1ga3-consistentdeveloper.xml
+18:56:32,314 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LicenseManager:?] Portal Development license validation passed
+18:56:32,315 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LicenseDeployer:?] License registered
+18:57:28,867 INFO  [MSC service thread 1-16][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook

@@ -1,0 +1,139 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<%
+long groupId = ParamUtil.getLong(request, "groupId");
+
+int assetEntryOrder = ParamUtil.getInteger(request, "assetEntryOrder", -1);
+
+PortletURL portletURL = renderResponse.createRenderURL();
+
+portletURL.setParameter("struts_action", "/portlet_configuration/edit_configuration");
+portletURL.setParameter("redirect", redirect);
+portletURL.setParameter("backURL", redirect);
+portletURL.setParameter("portletResource", portletResource);
+
+if (groupId > 0) {
+	portletURL.setParameter("groupId", String.valueOf(groupId));
+}
+
+portletURL.setParameter("typeSelection", typeSelection);
+%>
+
+<liferay-ui:header
+	backURL="<%= configurationRenderURL.toString() %>"
+	title='<%= LanguageUtil.get(pageContext, "select") + StringPool.COLON + StringPool.SPACE + ResourceActionsUtil.getModelResource(locale, typeSelection) %>'
+/>
+
+<div class="asset-search">
+	<liferay-portlet:renderURL varImpl="searchURL">
+		<portlet:param name="struts_action" value="/portlet_configuration/edit_configuration" />
+	</liferay-portlet:renderURL>
+
+	<aui:form action="<%= searchURL %>" method="post" name="searchFm">
+		<aui:input name="redirect" type="hidden" value="<%= redirect %>" />
+		<aui:input name="backURL" type="hidden" value="<%= redirect %>" />
+		<aui:input name="portletResource" type="hidden" value="<%= portletResource %>" />
+		<aui:input name="typeSelection" type="hidden" value="<%= typeSelection %>" />
+
+		<%
+		AssetSearch searchContainer = new AssetSearch(renderRequest, portletURL);
+		%>
+
+		<liferay-ui:search-form
+			page="/html/portlet/asset_publisher/asset_search.jsp"
+			searchContainer="<%= searchContainer %>"
+		/>
+
+		<%
+		AssetSearchTerms searchTerms = (AssetSearchTerms)searchContainer.getSearchTerms();
+		%>
+
+		<%@ include file="/html/portlet/asset_publisher/asset_search_results.jspf" %>
+
+		<div class="separator"><!-- --></div>
+
+		<%
+		List resultRows = searchContainer.getResultRows();
+
+		for (int i = 0; i < results.getDocs().length; i++) {
+			com.liferay.portal.kernel.search.Document doc = results.doc(i);
+
+			ResultRow row = new ResultRow(doc, i, i);
+
+			long entryId = GetterUtil.getLong(doc.get(Field.ENTRY_CLASS_PK));
+
+			AssetEntry entry = AssetEntryLocalServiceUtil.fetchEntry(typeSelection, entryId);
+
+			if (entry == null) {
+				continue;
+			}
+
+			entry = entry.toEscapedModel();
+
+			StringBundler sb = new StringBundler(11);
+
+			sb.append("javascript:");
+			sb.append(renderResponse.getNamespace());
+			sb.append("selectAsset('");
+			sb.append(entry.getEntryId());
+			sb.append("', '");
+			sb.append(assetEntryOrder);
+			sb.append("');");
+
+			String rowHREF = sb.toString();
+
+			// Title
+
+			AssetRenderer assetRenderer = assetRendererFactory.getAssetRenderer(entry.getClassPK());
+
+			row.addText(HtmlUtil.escape(assetRenderer.getTitle(locale)), rowHREF);
+
+			// Description
+
+			row.addText(assetRenderer.getSummary(locale), rowHREF);
+
+			// User name
+
+			String userName = PortalUtil.getUserName(assetRenderer.getUserId(), assetRenderer.getUserName());
+
+			row.addText(HtmlUtil.escape(userName), rowHREF);
+
+			// Modified date
+
+			row.addText(dateFormatDate.format(entry.getModifiedDate()), rowHREF);
+
+			// Scope
+
+			Group group = GroupLocalServiceUtil.getGroup(entry.getGroupId());
+
+			row.addText(group.getDescriptiveName(locale), rowHREF);
+
+			// Add result row
+
+			resultRows.add(row);
+		}
+		%>
+
+		<liferay-ui:search-iterator searchContainer="<%= searchContainer %>" />
+	</aui:form>
+</div>
+
+<c:if test="<%= windowState.equals(WindowState.MAXIMIZED) %>">
+	<aui:script>
+		Liferay.Util.focusFormField(document.<portlet:namespace />searchFm.<portlet:namespace />keywords);
+	</aui:script>
+</c:if>

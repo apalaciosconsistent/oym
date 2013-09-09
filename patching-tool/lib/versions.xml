@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+
+<libraries>
+	<library>
+		<file-name>log4j.jar</file-name>
+		<version>1.2.15</version>
+		<project-name>Log4j</project-name>
+		<project-url>http://logging.apache.org/log4j/docs</project-url>
+		<licenses>
+			<license>
+				<license-name>Apache License 2.0</license-name>
+			</license>
+		</licenses>
+	</library>
+	<library>
+		<file-name>proguard.jar</file-name>
+		<version>4.9</version>
+		<project-name>ProGuard</project-name>
+		<project-url>http://proguard.sourceforge.net/</project-url>
+		<licenses>
+			<license>
+				<license-name>GPL</license-name>
+			</license>
+		</licenses>
+	</library>
+	<library>
+		<file-name>truezip.jar</file-name>
+		<version>6.8.4</version>
+		<project-name>TrueZIP</project-name>
+		<project-url>http://truezip.dev.java.net</project-url>
+		<licenses>
+			<license>
+				<license-name>Apache License 2.0</license-name>
+			</license>
+		</licenses>
+	</library>
+</libraries>

@@ -1,0 +1,109 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<%
+if (!denyAccess && (themeDisplay.isStateExclusive() || themeDisplay.isStatePopUp() || (layoutTypePortlet.hasStateMax() && (portlet != null)) || Validator.isNotNull(controlPanelCategory))) {
+	String velocityTemplateId = null;
+
+	String content = null;
+
+	if (themeDisplay.isStateExclusive()) {
+		velocityTemplateId = theme.getThemeId() + LayoutTemplateConstants.STANDARD_SEPARATOR + "exclusive";
+
+		content = LayoutTemplateLocalServiceUtil.getContent("exclusive", true, theme.getThemeId());
+	}
+	else if (themeDisplay.isStatePopUp()) {
+		velocityTemplateId = theme.getThemeId() + LayoutTemplateConstants.STANDARD_SEPARATOR + "pop_up";
+
+		content = LayoutTemplateLocalServiceUtil.getContent("pop_up", true, theme.getThemeId());
+	}
+	else if (layoutTypePortlet.hasStateMax()) {
+		String portletTitle = PortalUtil.getPortletTitle(portlet, application, locale);
+
+		PortletURL portletURL = new PortletURLImpl(request, ppid, plid, PortletRequest.RENDER_PHASE);
+
+		portletURL.setPortletMode(PortletMode.VIEW);
+		portletURL.setWindowState(WindowState.MAXIMIZED);
+
+		PortalUtil.addPortletBreadcrumbEntry(request, portletTitle, portletURL.toString());
+
+		ppid = StringUtil.split(layoutTypePortlet.getStateMax())[0];
+
+		velocityTemplateId = theme.getThemeId() + LayoutTemplateConstants.STANDARD_SEPARATOR + "max";
+
+		content = LayoutTemplateLocalServiceUtil.getContent("max", true, theme.getThemeId());
+	}
+	else {
+		velocityTemplateId = theme.getThemeId() + LayoutTemplateConstants.STANDARD_SEPARATOR + "max";
+
+		content = LayoutTemplateLocalServiceUtil.getContent("max", true, theme.getThemeId());
+
+		Set<String> runtimePortletIds = (Set<String>)request.getAttribute(WebKeys.RUNTIME_PORTLET_IDS);
+
+		if (runtimePortletIds == null) {
+			runtimePortletIds = new HashSet<String>();
+		}
+
+		runtimePortletIds.add(ppid);
+
+		request.setAttribute(WebKeys.RUNTIME_PORTLET_IDS, runtimePortletIds);
+	}
+
+	StringBundler sb = null;
+
+	if (Validator.isNotNull(velocityTemplateId) && Validator.isNotNull(content)) {
+		sb = RuntimePortletUtil.getProcessedTemplate(application, request, response, pageContext, out, ppid, velocityTemplateId, content);
+	}
+	%>
+
+	<div class="site-breadcrumbs" id="breadcrumbs">
+		<h1>
+			<span>
+				<liferay-ui:message key="breadcrumb" />
+			</span>
+		</h1>
+
+		<liferay-ui:breadcrumb />
+	</div>
+
+	<%
+	if (sb != null) {
+		sb.writeTo(pageContext.getOut());
+	}
+}
+else {
+	String description = StringPool.BLANK;
+
+	String className = "portlet-msg-info";
+
+	if (denyAccess) {
+		description = LanguageUtil.get(pageContext, "you-do-not-have-the-required-permissions-to-access-this-application");
+
+		className = "portlet-msg-error";
+	}
+
+	if (Validator.isNull(description)) {
+		description = LanguageUtil.get(pageContext, "please-select-a-tool-from-the-left-menu");
+	}
+%>
+
+	<div class="<%= className %>">
+		<%= description %>
+	</div>
+
+<%
+}
+%>

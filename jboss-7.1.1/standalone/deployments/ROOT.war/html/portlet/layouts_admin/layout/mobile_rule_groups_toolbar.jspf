@@ -1,0 +1,149 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<div class="lfr-portlet-toolbar">
+	<c:if test="<%= MDRPermissionUtil.contains(permissionChecker, groupId, ActionKeys.ADD_RULE_GROUP_INSTANCE) %>">
+		<span class="lfr-toolbar-button add-button">
+			<a href="javascript:;" id="<portlet:namespace />saveInstance"><liferay-ui:message key="select-rule-group" /></a>
+		</span>
+
+		<span class="lfr-toolbar-button view-structures">
+			<a href="javascript:;" id="<portlet:namespace />managePriorities"><liferay-ui:message key="manage-rule-group-priorities" /></a>
+		</span>
+	</c:if>
+</div>
+
+<liferay-portlet:renderURL portletName="<%= PortletKeys.MOBILE_DEVICE_SITE_ADMIN %>" varImpl="selectRuleGroupURL" windowState="<%= LiferayWindowState.POP_UP.toString() %>">
+	<portlet:param name="struts_action" value="/mobile_device_rules/view" />
+	<portlet:param name="groupId" value="<%= String.valueOf(groupId) %>" />
+	<portlet:param name="className" value="<%= className %>" />
+	<portlet:param name="classPK" value="<%= String.valueOf(classPK) %>" />
+	<portlet:param name="chooseCallback" value='<%= liferayPortletResponse.getNamespace() + "saveRuleGroupInstance" %>' />
+</liferay-portlet:renderURL>
+
+<liferay-portlet:renderURL portletName="<%= PortletKeys.MOBILE_DEVICE_SITE_ADMIN %>" varImpl="managePrioritiesURL" windowState="<%= LiferayWindowState.POP_UP.toString() %>">
+	<portlet:param name="struts_action" value="/mobile_device_rules/edit_rule_group_instance" />
+	<portlet:param name="groupId" value="<%= String.valueOf(groupId) %>" />
+	<portlet:param name="className" value="<%= className %>" />
+	<portlet:param name="classPK" value="<%= String.valueOf(classPK) %>" />
+	<portlet:param name="saveCallback" value='<%= liferayPortletResponse.getNamespace() + "saveRuleGroupsPriorities" %>' />
+</liferay-portlet:renderURL>
+
+<aui:script>
+	Liferay.provide(
+		window,
+		'<portlet:namespace />processDialog',
+		function(dialog) {
+			var A = AUI();
+
+			if (dialog) {
+				if (Liferay.Util.getTop() == window) {
+					dialog.plug(A.LoadingMask).render();
+				}
+				else {
+					dialog.close();
+				}
+			}
+		},
+		['aui-loading-mask']
+	);
+
+	function <portlet:namespace />saveRuleGroupsPriorities(dialog) {
+		<portlet:namespace />processDialog(dialog);
+
+		location.href = '<%= redirect %>' + Liferay.Util.getHistoryParam('<portlet:namespace />');
+	}
+
+	Liferay.provide(
+		window,
+		'<portlet:namespace />saveRuleGroupInstance',
+		function(ruleGroupId, ruleGroupName, dialog) {
+			var A = AUI();
+
+			<portlet:namespace />processDialog(dialog);
+
+			var serviceParameterTypes = [
+				'long',
+				'java.lang.String',
+				'long',
+				'long',
+				'com.liferay.portal.service.ServiceContext'
+			];
+
+			Liferay.Service.MDR.MDRRuleGroupInstance.addRuleGroupInstance(
+				{
+					groupId: <%= groupId %>,
+					className: '<%= className %>',
+					classPK: <%= classPK %>,
+					ruleGroupId: ruleGroupId,
+					serviceContext: A.JSON.stringify(
+						{
+							scopeGroupId: themeDisplay.getScopeGroupId(),
+							userId: themeDisplay.getUserId()
+						}
+					),
+					serviceParameterTypes: A.JSON.stringify(serviceParameterTypes)
+				},
+				function(response, xhr) {
+					location.href = '<%= redirect %>' + Liferay.Util.getHistoryParam('<portlet:namespace />');
+				}
+			);
+		},
+		['aui-loading-mask']
+	);
+</aui:script>
+
+<aui:script use="aui-base">
+	var config = {
+		dialog: {
+			align: Liferay.Util.Window.ALIGN_CENTER,
+			width: 820
+		}
+	};
+
+	var saveInstance = A.one('#<portlet:namespace />saveInstance');
+
+	if (saveInstance) {
+		saveInstance.on(
+			'click',
+			function(event) {
+				config.dialog.title = '<%= UnicodeLanguageUtil.get(pageContext, "rule-groups") %>';
+
+				config.id = '<portlet:namespace />ruleGroups';
+				config.uri = '<%= selectRuleGroupURL %>';
+
+				Liferay.Util.openWindow(config);
+			}
+		);
+	}
+
+	var managePriorities = A.one('#<portlet:namespace />managePriorities');
+
+	if (managePriorities) {
+		managePriorities.on(
+			'click',
+			function(event) {
+				config.dialog.title = '<%= UnicodeLanguageUtil.get(pageContext, "rule-group-priorities") %>';
+				config.dialog.width = 460;
+
+				config.id = '<portlet:namespace />ruleGroupsPriorities';
+				config.uri = '<%= managePrioritiesURL %>';
+
+				Liferay.Util.openWindow(config);
+			}
+		);
+	}
+</aui:script>

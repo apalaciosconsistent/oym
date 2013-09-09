@@ -1,0 +1,56 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<c:if test="<%= CalendarPermission.contains(permissionChecker, scopeGroupId, ActionKeys.EXPORT_ALL_EVENTS) %>">
+	<aui:fieldset label="export">
+		<aui:input cssClass="lfr-input-text-container" label="" name="exportFileName" type="text" value="liferay.ics" />
+	</aui:fieldset>
+
+	<portlet:actionURL var="exportEventsURL" windowState="<%= LiferayWindowState.EXCLUSIVE.toString() %>">
+		<portlet:param name="struts_action" value="/calendar/export_events" />
+	</portlet:actionURL>
+
+	<%
+	String taglibOnClick = "document." + renderResponse.getNamespace() + "fm.action = '" + exportEventsURL + "'; document." + renderResponse.getNamespace() + "fm.submit();";
+	%>
+
+	<aui:button-row>
+		<aui:button onClick="<%= taglibOnClick %>" value="export" />
+	</aui:button-row>
+</c:if>
+
+<c:if test="<%= CalendarPermission.contains(permissionChecker, scopeGroupId, ActionKeys.ADD_EVENT) %>">
+	<c:if test="<%= CalendarPermission.contains(permissionChecker, scopeGroupId, ActionKeys.EXPORT_ALL_EVENTS) %>">
+		<br /><br />
+	</c:if>
+
+	<aui:fieldset label="import">
+		<aui:input cssClass="lfr-input-text-container" label="" name="file" type="file" />
+	</aui:fieldset>
+
+	<portlet:actionURL var="importEventsURL">
+		<portlet:param name="struts_action" value="/calendar/import_events" />
+		<portlet:param name="redirect" value="<%= currentURL %>" />
+	</portlet:actionURL>
+
+	<%
+	String taglibOnClick = "document." + renderResponse.getNamespace() + "fm.encoding = 'multipart/form-data'; document." + renderResponse.getNamespace() + "fm.action = '" + importEventsURL + "'; document." + renderResponse.getNamespace() + "fm.submit();";
+	%>
+
+	<aui:button-row>
+		<aui:button onClick="<%= taglibOnClick %>" value="import" />
+	</aui:button-row>
+</c:if>

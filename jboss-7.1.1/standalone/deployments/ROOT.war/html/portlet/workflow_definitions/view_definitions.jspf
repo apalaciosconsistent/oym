@@ -1,0 +1,68 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<%
+List<WorkflowDefinition> workflowDefinitions = WorkflowDefinitionManagerUtil.getWorkflowDefinitions(company.getCompanyId(), 0, 100, null);
+
+portletURL.setParameter("struts_action", "/workflow_definitions/view");
+%>
+
+<liferay-util:include page="/html/portlet/workflow_definitions/toolbar.jsp">
+	<liferay-util:param name="toolbarItem" value="view-all" />
+</liferay-util:include>
+
+<liferay-ui:search-container
+	emptyResultsMessage="no-workflow-definitions-are-defined"
+	iteratorURL="<%= portletURL %>"
+>
+	<liferay-ui:search-container-results
+		results="<%= ListUtil.subList(workflowDefinitions, searchContainer.getStart(), searchContainer.getEnd()) %>"
+		total="<%= workflowDefinitions.size() %>"
+	/>
+
+	<liferay-ui:search-container-row
+		className="com.liferay.portal.kernel.workflow.WorkflowDefinition"
+		modelVar="workflowDefinition"
+	>
+
+		<liferay-ui:search-container-column-text
+			name="name"
+			value="<%= workflowDefinition.getName() %>"
+		/>
+
+		<liferay-ui:search-container-column-text
+			name="title"
+			value="<%= workflowDefinition.getTitle(themeDisplay.getLanguageId()) %>"
+		/>
+
+		<liferay-ui:search-container-column-text
+			name="version"
+			value="<%= String.valueOf(workflowDefinition.getVersion()) %>"
+		/>
+
+		<liferay-ui:search-container-column-text
+			name="active"
+			value='<%= workflowDefinition.isActive() ? LanguageUtil.get(locale, "yes") : LanguageUtil.get(locale, "no") %>'
+		/>
+
+		<liferay-ui:search-container-column-jsp
+			align="right"
+			path="/html/portlet/workflow_definitions/workflow_definition_action.jsp"
+		/>
+	</liferay-ui:search-container-row>
+
+	<liferay-ui:search-iterator />
+</liferay-ui:search-container>

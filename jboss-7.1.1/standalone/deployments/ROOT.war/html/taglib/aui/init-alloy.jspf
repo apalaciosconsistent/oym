@@ -1,0 +1,67 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<%
+boolean useMarkup = GetterUtil.getBoolean((Serializable)_options.get("useMarkup"), true);
+
+Object boundingBox = (Object)request.getAttribute(_NAMESPACE.concat("boundingBox"));
+Object contentBox = (Object)request.getAttribute(_NAMESPACE.concat("contentBox"));
+Object srcNode = (Object)request.getAttribute(_NAMESPACE.concat("srcNode"));
+
+boolean hasBoundingBox = false;
+
+if (Validator.isNotNull(boundingBox)) {
+	hasBoundingBox = true;
+}
+
+boolean hasContentBox = false;
+
+if (Validator.isNotNull(contentBox)) {
+	hasContentBox = true;
+}
+
+boolean hasSrcNode = false;
+
+if (Validator.isNotNull(srcNode)) {
+	hasSrcNode = true;
+}
+
+String uniqueId = StringPool.BLANK;
+
+if (useMarkup) {
+	uniqueId = MarkupUtil.getUniqueId();
+
+	String prefix = StringPool.POUND.concat(uniqueId);
+
+	if (!hasBoundingBox) {
+		boundingBox = prefix.concat("BoundingBox");
+
+		_options.put("boundingBox", boundingBox);
+	}
+
+	if (!hasSrcNode && !hasContentBox) {
+		srcNode = prefix.concat("SrcNode");
+
+		_options.put("srcNode", srcNode);
+	}
+
+	if (!hasSrcNode && hasContentBox) {
+		contentBox = prefix.concat("ContentBox");
+
+		_options.put("contentBox", contentBox);
+	}
+}
+%>

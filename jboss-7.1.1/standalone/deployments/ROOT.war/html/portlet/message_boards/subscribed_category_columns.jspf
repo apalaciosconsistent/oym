@@ -1,0 +1,56 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<liferay-ui:search-container-column-text
+	buffer="buffer"
+	name="category"
+>
+
+	<%
+	buffer.append("<a href=\"");
+	buffer.append(rowURL);
+	buffer.append("\">");
+	buffer.append("<strong>");
+	buffer.append(curCategory.getName());
+	buffer.append("</strong>");
+
+	if (Validator.isNotNull(curCategory.getDescription())) {
+		buffer.append("<br />");
+		buffer.append(curCategory.getDescription());
+	}
+	%>
+
+</liferay-ui:search-container-column-text>
+
+<liferay-ui:search-container-column-text
+	href="<%= rowURL %>"
+	name="categories"
+	value="<%= String.valueOf(categoryDisplay.getSubcategoriesCount(curCategory)) %>"
+/>
+
+<liferay-ui:search-container-column-text
+	href="<%= rowURL %>"
+	name="threads"
+	value="<%= String.valueOf(categoryDisplay.getSubcategoriesThreadsCount(curCategory)) %>"
+/>
+
+<liferay-ui:search-container-column-text
+	href="<%= rowURL %>"
+	name="posts"
+	value="<%= String.valueOf(categoryDisplay.getSubcategoriesMessagesCount(curCategory)) %>"
+/>
+
+<%@ include file="/html/portlet/message_boards/subscribed_category_columns_action.jspf" %>

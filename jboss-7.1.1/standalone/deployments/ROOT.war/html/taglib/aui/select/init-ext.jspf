@@ -1,0 +1,43 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<%
+if (request.getAttribute("aui:select:useNamespace") == null) {
+	useNamespace = auiFormUseNamespace;
+}
+
+if (!useNamespace) {
+	namespace = StringPool.BLANK;
+}
+
+if (Validator.isNull(label) && changesContext) {
+	StringBundler sb = new StringBundler(5);
+
+	sb.append(LanguageUtil.get(pageContext, title));
+	sb.append(StringPool.SPACE);
+	sb.append(StringPool.OPEN_PARENTHESIS);
+	sb.append(LanguageUtil.get(pageContext, "changing-the-value-of-this-field-will-reload-the-page"));
+	sb.append(StringPool.CLOSE_PARENTHESIS);
+
+	title = sb.toString();
+}
+else if (Validator.isNotNull(title)) {
+	title = LanguageUtil.get(pageContext, title);
+}
+
+String fieldCss = AUIUtil.buildCss(AUIUtil.FIELD_PREFIX, "select", inlineField, disabled, false, first, last, cssClass);
+String inputCss = AUIUtil.buildCss(AUIUtil.INPUT_PREFIX, "select", false, false, false, false, false, inputCssClass);
+%>

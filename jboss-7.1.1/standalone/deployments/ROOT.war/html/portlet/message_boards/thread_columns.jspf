@@ -1,0 +1,88 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<liferay-ui:search-container-column-text
+	buffer="buffer"
+	href="<%= rowURL %>"
+	name="thread"
+>
+
+	<%
+	String[] threadPriority = MBUtil.getThreadPriority(preferences, themeDisplay.getLanguageId(), thread.getPriority(), themeDisplay);
+
+	if ((threadPriority != null) && (thread.getPriority() > 0)) {
+		buffer.append("<img class=\"thread-priority\" alt=\"");
+		buffer.append(threadPriority[0]);
+		buffer.append("\" src=\"");
+		buffer.append(threadPriority[1]);
+		buffer.append("\" title=\"");
+		buffer.append(threadPriority[0]);
+		buffer.append("\" />");
+	}
+
+	if (thread.isLocked()) {
+		buffer.append("<img class=\"thread-priority\" alt=\"");
+		buffer.append(LanguageUtil.get(pageContext, "thread-locked"));
+		buffer.append("\" src=\"");
+		buffer.append(themeDisplay.getPathThemeImages() + "/common/lock.png");
+		buffer.append("\" title=\"");
+		buffer.append(LanguageUtil.get(pageContext, "thread-locked"));
+		buffer.append("\" />");
+	}
+
+	buffer.append(message.getSubject());
+	%>
+
+</liferay-ui:search-container-column-text>
+
+<liferay-ui:search-container-column-text
+	buffer="buffer"
+	href="<%= rowURL %>"
+	name="flag"
+>
+
+	<%
+	if (MBThreadLocalServiceUtil.hasAnswerMessage(thread.getThreadId())) {
+		buffer.append(LanguageUtil.get(pageContext, "resolved"));
+	}
+	else if (thread.isQuestion()) {
+		buffer.append(LanguageUtil.get(pageContext, "waiting-for-an-answer"));
+	}
+	%>
+
+</liferay-ui:search-container-column-text>
+
+<liferay-ui:search-container-column-text
+	href="<%= rowURL %>"
+	name="started-by"
+	value='<%= message.isAnonymous() ? LanguageUtil.get(pageContext, "anonymous") : HtmlUtil.escape(PortalUtil.getUserName(message.getUserId(), message.getUserName())) %>'
+/>
+
+<liferay-ui:search-container-column-text
+	href="<%= rowURL %>"
+	name="posts"
+	value="<%= String.valueOf(thread.getMessageCount()) %>"
+/>
+
+<liferay-ui:search-container-column-text
+	href="<%= rowURL %>"
+	name="views"
+	value="<%= String.valueOf(thread.getViewCount()) %>"
+/>
+
+<%@ include file="/html/portlet/message_boards/thread_columns_last_post.jspf" %>
+
+<%@ include file="/html/portlet/message_boards/thread_columns_action.jspf" %>

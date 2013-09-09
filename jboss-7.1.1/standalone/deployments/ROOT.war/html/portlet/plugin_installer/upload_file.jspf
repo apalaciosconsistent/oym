@@ -1,0 +1,37 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<liferay-ui:success key="pluginUploaded" message="the-plugin-was-uploaded-successfully-and-is-now-being-installed" />
+
+<liferay-ui:error exception="<%= UploadException.class %>" message="an-unexpected-error-occurred-while-uploading-your-file" />
+
+<aui:fieldset>
+	<aui:input cssClass="lfr-input-text" label="upload-a-war-file-to-install-a-layout-template,-portlet,-or-theme" name="file" type="file" />
+</aui:fieldset>
+
+<aui:fieldset>
+	<aui:input helpMessage='<%= LanguageUtil.format(pageContext, "for-example-x", "sample-jsp-portlet") %>' label="specify-an-optional-context-for-deployment" name="deploymentContext" size="20" type="text" />
+</aui:fieldset>
+
+<aui:button-row>
+	<aui:button onClick='<%= uploadProgressId + ".startProgress();" + renderResponse.getNamespace() + "installPluginPackage(" + StringPool.APOSTROPHE + "localDeploy" + StringPool.APOSTROPHE + ");" %>' value="install" />
+</aui:button-row>
+
+<liferay-ui:upload-progress
+	id="<%= uploadProgressId %>"
+	message="uploading"
+	redirect="<%= portletURLString %>"
+/>

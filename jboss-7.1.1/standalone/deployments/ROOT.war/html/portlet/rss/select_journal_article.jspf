@@ -1,0 +1,106 @@
+<%--
+/**
+ * Copyright (c) 2000-2013 Liferay, Inc. All rights reserved.
+ *
+ * The contents of this file are subject to the terms of the Liferay Enterprise
+ * Subscription License ("License"). You may not use this file except in
+ * compliance with the License. You can obtain a copy of the License by
+ * contacting Liferay, Inc. See the License for the specific language governing
+ * permissions and limitations under the License, including but not limited to
+ * distribution rights of the Software.
+ *
+ *
+ *
+ */
+--%>
+
+<%
+PortletURL portletURL = renderResponse.createRenderURL();
+
+portletURL.setParameter("struts_action", "/portlet_configuration/edit_configuration");
+portletURL.setParameter("redirect", redirect);
+portletURL.setParameter("backURL", redirect);
+portletURL.setParameter("portletResource", portletResource);
+portletURL.setParameter("typeSelection", JournalArticle.class.getName());
+portletURL.setParameter("assetOrder", String.valueOf(assetOrder));
+%>
+
+<liferay-ui:header
+	backURL="<%= configurationRenderURL.toString() %>"
+	title="web-content"
+/>
+
+<%
+ArticleSearch searchContainer = new ArticleSearch(renderRequest, portletURL);
+%>
+
+<liferay-ui:search-form
+	page="/html/portlet/journal/article_search.jsp"
+	searchContainer="<%= searchContainer %>"
+/>
+
+<%
+ArticleSearchTerms searchTerms = (ArticleSearchTerms)searchContainer.getSearchTerms();
+
+searchTerms.setVersion(-1);
+
+List<JournalArticle> results = null;
+%>
+
+<%@ include file="/html/portlet/journal/article_search_results.jspf" %>
+
+<%
+List resultRows = searchContainer.getResultRows();
+
+for (int i = 0; i < results.size(); i++) {
+	JournalArticle article = results.get(i);
+
+	ResultRow row = new ResultRow(article, article.getArticleId() + EditArticleAction.VERSION_SEPARATOR + article.getVersion(), i);
+
+	StringBundler sb = new StringBundler(9);
+
+	sb.append("javascript:");
+	sb.append(renderResponse.getNamespace());
+	sb.append("selectAsset('");
+	sb.append(article.getGroupId());
+	sb.append("', '");
+	sb.append(article.getArticleId());
+	sb.append("', '");
+	sb.append(assetOrder);
+	sb.append("');");
+
+	String rowHREF = sb.toString();
+
+	// Article id
+
+	row.addText(article.getArticleId(), rowHREF);
+
+	// Title
+
+	row.addText(HtmlUtil.escape(article.getTitle(locale)), rowHREF);
+
+	// Version
+
+	row.addText(String.valueOf(article.getVersion()), rowHREF);
+
+	// Modified date
+
+	row.addText(dateFormatDate.format(article.getModifiedDate()), rowHREF);
+
+	// Display date
+
+	row.addText(dateFormatDate.format(article.getDisplayDate()), rowHREF);
+
+	// Author
+
+	row.addText(HtmlUtil.escape(PortalUtil.getUserName(article)), rowHREF);
+
+	// Add result row
+
+	resultRows.add(row);
+}
+%>
+
+<liferay-ui:search-iterator searchContainer="<%= searchContainer %>" />
+
+<br />
