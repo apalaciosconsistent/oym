@@ -3,7 +3,7 @@
 
 <plugin-package>
 	<name>Portal Compatibility EE Hook</name>
-	<module-id>liferay/portal-compat-hook/6.1.20.1-ee-ga3/war</module-id>
+	<module-id>liferay/portal-compat-hook/6.1.20.1-ee-ga3-20130812170130063/war</module-id>
 	<types>
 		<type>hook</type>
 	</types>

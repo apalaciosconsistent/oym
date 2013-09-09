@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE plugin-package PUBLIC "-//Liferay//DTD Plugin Package 6.1.0//EN" "http://www.liferay.com/dtd/liferay-plugin-package_6_1_0.dtd">
+
+<plugin-package>
+	<name>Resources Importer EE Web</name>
+	<module-id>liferay/resources-importer-web/6.1.20.3-ee-ga3-20130812170130063/war</module-id>
+	<types>
+		<type>web</type>
+	</types>
+	<tags>
+		<tag>configuration</tag>
+		<tag>lar</tag>
+		<tag>layout</tag>
+		<tag>package</tag>
+		<tag>theme</tag>
+		<tag>web content</tag>
+	</tags>
+	<short-description></short-description>
+	<long-description>The Resources Importer app allows front-end developers to package web content, portlet configurations, and layouts together in a theme without saving it as a compiled .LAR file thereby allowing for greater flexibility in its usage between Liferay Portal versions.<br /><br />This app will automatically create associated content when other plugins are deployed that are configured to make use of the Resource Importer app.<br /><br />This app installs as a Liferay service.</long-description>
+	<change-log></change-log>
+	<page-url>http://www.liferay.com</page-url>
+	<author>Liferay, Inc.</author>
+	<licenses>
+		<license osi-approved="true">EE</license>
+	</licenses>
+	<liferay-versions>
+		<liferay-version>6.1.20+</liferay-version>
+	</liferay-versions>
+</plugin-package>

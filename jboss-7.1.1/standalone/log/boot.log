@@ -1,7 +1,8 @@
-18:55:05,314 INFO  [org.jboss.modules] JBoss Modules version 1.1.1.GA
-18:55:05,676 INFO  [org.jboss.msc] JBoss MSC version 1.0.2.GA
-18:55:05,739 INFO  [org.jboss.as] JBAS015899: JBoss AS 7.1.1.Final "Brontes" starting
-18:55:05,743 DEBUG [org.jboss.as.config] Configured system properties:
+03:52:15,730 INFO  [org.jboss.modules] JBoss Modules version 1.1.1.GA
+03:52:15,882 INFO  [org.jboss.msc] JBoss MSC version 1.0.2.GA
+03:52:15,925 INFO  [org.jboss.as] JBAS015899: JBoss AS 7.1.1.Final "Brontes" starting
+03:52:15,927 DEBUG [org.jboss.as.config] Configured system properties:
+	[Standalone] = 
 	file.encoding = UTF-8
 	file.encoding.pkg = sun.io
 	file.separator = /
@@ -14,7 +15,7 @@
 	java.ext.dirs = /usr/lib/jvm/java-6-oracle/jre/lib/ext:/usr/java/packages/lib/ext
 	java.home = /usr/lib/jvm/java-6-oracle/jre
 	java.io.tmpdir = /tmp
-	java.library.path = /usr/lib/jvm/java-6-oracle/jre/lib/amd64/server:/usr/lib/jvm/java-6-oracle/jre/lib/amd64:/usr/lib/jvm/java-6-oracle/jre/../lib/amd64:/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+	java.library.path = /usr/lib/jvm/java-6-oracle/jre/lib/amd64/server:/usr/lib/jvm/java-6-oracle/jre/lib/amd64:/usr/lib/jvm/java-6-oracle/jre/../lib/amd64:/u01/app/oracle/product/11.2.0/xe/lib::/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
 	java.net.preferIPv4Stack = true
 	java.runtime.name = Java(TM) SE Runtime Environment
 	java.runtime.version = 1.6.0_45-b06
@@ -43,7 +44,7 @@
 	javax.xml.transform.TransformerFactory = __redirected.__TransformerFactory
 	javax.xml.validation.SchemaFactory:http://www.w3.org/2001/XMLSchema = __redirected.__SchemaFactory
 	javax.xml.xpath.XPathFactory:http://java.sun.com/jaxp/xpath/dom = __redirected.__XPathFactory
-	jboss.bind.address = localhost
+	jboss.bind.address = 0.0.0.0
 	jboss.home.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1
 	jboss.host.name = deuxmachina
 	jboss.modules.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/modules
@@ -53,6 +54,7 @@
 	jboss.server.base.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone
 	jboss.server.config.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/configuration
 	jboss.server.data.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/data
+	jboss.server.default.config = standalone.xml
 	jboss.server.deploy.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/data/content
 	jboss.server.log.dir = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/log
 	jboss.server.name = deuxmachina
@@ -75,7 +77,7 @@
 	sun.cpu.isalist = 
 	sun.desktop = gnome
 	sun.io.unicode.encoding = UnicodeLittle
-	sun.java.command = org.jboss.modules.Main -mp /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -b localhost --server-config=standalone.xml
+	sun.java.command = /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/jboss-modules.jar -mp /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/modules -jaxpmodule javax.xml.jaxp-provider org.jboss.as.standalone -Djboss.home.dir=/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1 -b 0.0.0.0
 	sun.java.launcher = SUN_STANDARD
 	sun.jnu.encoding = UTF-8
 	sun.management.compiler = HotSpot 64-Bit Tiered Compilers
@@ -87,29 +89,44 @@
 	user.home = /home/laishidua
 	user.language = es
 	user.name = laishidua
-	user.timezone = America/Mexico_City
-18:55:05,751 DEBUG [org.jboss.as.config] VM Arguments: -Xms64m -Xmx512m -XX:MaxPermSize=256m -Djava.net.preferIPv4Stack=true -Dorg.jboss.resolver.warning=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Dorg.jboss.boot.log.file=/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/log/boot.log -Dlogging.configuration=file:/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/configuration/logging.properties -Djboss.home.dir=/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1 -Dfile.encoding=UTF-8 
-18:55:07,349 INFO  [org.xnio] XNIO Version 3.0.3.GA
-18:55:07,350 INFO  [org.jboss.as.server] JBAS015888: Creating http management service using socket-binding (management-http)
-18:55:07,357 INFO  [org.xnio.nio] XNIO NIO Implementation Version 3.0.3.GA
-18:55:07,363 INFO  [org.jboss.remoting] JBoss Remoting version 3.2.3.GA
-18:55:07,394 INFO  [org.jboss.as.logging] JBAS011502: Removing bootstrap log handlers
-18:57:28,846 INFO  [org.jboss.as.logging] JBAS011503: Restored bootstrap log handlers
-18:57:28,847 INFO  [org.apache.coyote.http11.Http11Protocol] Pausando Coyote HTTP/1.1 en puerto http-localhost-127.0.0.1-8080
-18:57:28,847 INFO  [org.apache.coyote.http11.Http11Protocol] Parando Coyote HTTP/1.1 en puerto http-localhost-127.0.0.1-8080
-18:57:28,854 INFO  [org.jboss.as.mail.extension] JBAS015401: Unbound mail session [java:jboss/mail/Default]
-18:57:28,868 INFO  [stdout] 18:57:28,867 INFO  [MSC service thread 1-16][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook
-18:57:28,908 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment portal-compat-hook.war in 74ms
-18:57:28,908 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment marketplace-portlet.war in 75ms
-18:57:30,266 INFO  [hsqldb.db.HSQLDB4075095634.ENGINE] Database closed
-18:57:30,386 INFO  [org.quartz.core.QuartzScheduler] Scheduler PersistedQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutting down.
-18:57:30,389 INFO  [org.quartz.core.QuartzScheduler] Scheduler PersistedQuartzSchedulerEngineInstance_$_NON_CLUSTERED paused.
-18:57:30,392 INFO  [org.quartz.core.QuartzScheduler] Scheduler PersistedQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutdown complete.
-18:57:30,395 INFO  [org.quartz.core.QuartzScheduler] Scheduler MemoryQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutting down.
-18:57:30,398 INFO  [org.quartz.core.QuartzScheduler] Scheduler MemoryQuartzSchedulerEngineInstance_$_NON_CLUSTERED paused.
-18:57:30,402 INFO  [org.quartz.core.QuartzScheduler] Scheduler MemoryQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutdown complete.
-18:57:31,427 INFO  [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/]] Closing Spring root WebApplicationContext
-18:57:32,753 INFO  [com.arjuna.ats.jbossatx] ARJUNA032018: Destroying TransactionManagerService
-18:57:32,755 INFO  [com.arjuna.ats.jbossatx] ARJUNA032014: Stopping transaction recovery manager
-18:57:32,825 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment ROOT.war in 3992ms
-18:57:32,828 INFO  [org.jboss.as] JBAS015950: JBoss AS 7.1.1.Final "Brontes" stopped in 3981ms
+	user.timezone = GMT
+03:52:15,935 DEBUG [org.jboss.as.config] VM Arguments: -D[Standalone] -XX:+UseCompressedOops -XX:+TieredCompilation -Djava.net.preferIPv4Stack=true -Dorg.jboss.resolver.warning=true -Dsun.rmi.dgc.client.gcInterval=3600000 -Dsun.rmi.dgc.server.gcInterval=3600000 -Djboss.modules.system.pkgs=org.jboss.byteman -Djava.awt.headless=true -Djboss.server.default.config=standalone.xml -Dfile.encoding=UTF-8 -Djava.net.preferIPv4Stack=true -Duser.timezone=GMT -Xmx5120m -XX:MaxPermSize=2048m -Dorg.jboss.boot.log.file=/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/log/boot.log -Dlogging.configuration=file:/home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/jboss-7.1.1/standalone/configuration/logging.properties 
+03:52:16,546 INFO  [org.jboss.as.server] JBAS015888: Creating http management service using socket-binding (management-http)
+03:52:16,547 INFO  [org.xnio] XNIO Version 3.0.3.GA
+03:52:16,558 INFO  [org.xnio.nio] XNIO NIO Implementation Version 3.0.3.GA
+03:52:16,566 INFO  [org.jboss.remoting] JBoss Remoting version 3.2.3.GA
+03:52:16,579 INFO  [org.jboss.as.logging] JBAS011502: Removing bootstrap log handlers
+04:16:27,166 INFO  [org.jboss.as.logging] JBAS011503: Restored bootstrap log handlers
+04:16:27,167 INFO  [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/private-plugin-installer-hook]] Closing Spring root WebApplicationContext
+04:16:27,177 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment ojdbc6.jar in 37ms
+04:16:27,178 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment portal-compat-hook.war in 31ms
+04:16:27,178 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment resources-importer-web.war in 39ms
+04:16:27,234 INFO  [stdout] 04:16:27,233 INFO  [MSC service thread 1-7][HookHotDeployListener:834] Hook for private-plugin-installer-hook was unregistered
+04:16:27,250 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment marketplace-portlet.war in 98ms
+04:16:27,250 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment private-plugin-installer-hook.war in 92ms
+04:16:27,310 INFO  [org.quartz.core.QuartzScheduler] Scheduler PersistedQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutting down.
+04:16:27,311 INFO  [org.quartz.core.QuartzScheduler] Scheduler PersistedQuartzSchedulerEngineInstance_$_NON_CLUSTERED paused.
+04:16:27,312 INFO  [org.quartz.core.QuartzScheduler] Scheduler PersistedQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutdown complete.
+04:16:27,312 INFO  [org.quartz.core.QuartzScheduler] Scheduler MemoryQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutting down.
+04:16:27,312 INFO  [org.quartz.core.QuartzScheduler] Scheduler MemoryQuartzSchedulerEngineInstance_$_NON_CLUSTERED paused.
+04:16:27,313 INFO  [org.quartz.core.QuartzScheduler] Scheduler MemoryQuartzSchedulerEngineInstance_$_NON_CLUSTERED shutdown complete.
+04:16:28,319 GRAVE [com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterHelper] java.lang.NullPointerException: java.lang.NullPointerException
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilterHelper.destroy(InvokerFilterHelper.java:55) [portal-service.jar:]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.doPortalDestroy(InvokerFilter.java:125) [portal-service.jar:]
+	at com.liferay.portal.kernel.util.BasePortalLifecycle.portalDestroy(BasePortalLifecycle.java:31) [portal-service.jar:]
+	at com.liferay.portal.kernel.servlet.filters.invoker.InvokerFilter.destroy(InvokerFilter.java:53) [portal-service.jar:]
+	at org.apache.catalina.core.ApplicationFilterConfig.release(ApplicationFilterConfig.java:504) [jbossweb-7.0.13.Final.jar:]
+	at org.apache.catalina.core.StandardContext.filterStop(StandardContext.java:3301) [jbossweb-7.0.13.Final.jar:]
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:3989) [jbossweb-7.0.13.Final.jar:]
+	at org.jboss.as.web.deployment.WebDeploymentService.stop(WebDeploymentService.java:108) [jboss-as-web-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.stopService(ServiceControllerImpl.java:1911)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.run(ServiceControllerImpl.java:1874)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895) [rt.jar:1.6.0_45]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918) [rt.jar:1.6.0_45]
+	at java.lang.Thread.run(Thread.java:662) [rt.jar:1.6.0_45]
+
+04:16:28,360 INFO  [org.apache.catalina.core.ContainerBase.[jboss.web].[default-host].[/]] Closing Spring root WebApplicationContext
+04:16:28,624 INFO  [com.arjuna.ats.jbossatx] ARJUNA032018: Destroying TransactionManagerService
+04:16:28,625 INFO  [com.arjuna.ats.jbossatx] ARJUNA032014: Stopping transaction recovery manager
+04:16:28,682 INFO  [org.jboss.as.server.deployment] JBAS015877: Stopped deployment ROOT.war in 1526ms
+04:16:28,684 INFO  [org.jboss.as] JBAS015950: JBoss AS 7.1.1.Final "Brontes" stopped in 1528ms

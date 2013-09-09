@@ -1,0 +1,857 @@
+03:42:09,084 ERROR [MSC service thread 1-4][DialectDetector:124] java.sql.SQLException: javax.resource.ResourceException: IJ000453: Unable to get managed connection for java:/jdbc/LiferayPool
+java.sql.SQLException: javax.resource.ResourceException: IJ000453: Unable to get managed connection for java:/jdbc/LiferayPool
+	at org.jboss.jca.adapters.jdbc.WrapperDataSource.getConnection(WrapperDataSource.java:137)
+	at com.liferay.portal.dao.jdbc.util.DataSourceWrapper.getConnection(DataSourceWrapper.java:39)
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.getTargetConnection(LazyConnectionDataSourceProxy.java:403)
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.invoke(LazyConnectionDataSourceProxy.java:376)
+	at com.sun.proxy.$Proxy16.getMetaData(Unknown Source)
+	at com.liferay.portal.spring.hibernate.DialectDetector.getDialect(DialectDetector.java:56)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.determineDialect(PortalHibernateConfiguration.java:82)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.newConfiguration(PortalHibernateConfiguration.java:116)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:549)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.buildSessionFactory(PortalHibernateConfiguration.java:65)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1479)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:630)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:441)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:982)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:878)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:484)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1085)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1085)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:410)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:282)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:204)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at com.liferay.portal.spring.context.PortalContextLoaderListener.contextInitialized(PortalContextLoaderListener.java:186)
+	at org.apache.catalina.core.StandardContext.contextListenerStart(StandardContext.java:3392)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3850)
+	at org.jboss.as.web.deployment.WebDeploymentService.start(WebDeploymentService.java:90)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: javax.resource.ResourceException: IJ000453: Unable to get managed connection for java:/jdbc/LiferayPool
+	at org.jboss.jca.core.connectionmanager.AbstractConnectionManager.getManagedConnection(AbstractConnectionManager.java:390)
+	at org.jboss.jca.core.connectionmanager.tx.TxConnectionManagerImpl.getManagedConnection(TxConnectionManagerImpl.java:368)
+	at org.jboss.jca.core.connectionmanager.AbstractConnectionManager.allocateConnection(AbstractConnectionManager.java:464)
+	at org.jboss.jca.adapters.jdbc.WrapperDataSource.getConnection(WrapperDataSource.java:129)
+	... 64 more
+Caused by: javax.resource.ResourceException: IJ000658: Unexpected throwable while trying to create a connection: null
+	at org.jboss.jca.core.connectionmanager.pool.mcp.SemaphoreArrayListManagedConnectionPool.getConnection(SemaphoreArrayListManagedConnectionPool.java:371)
+	at org.jboss.jca.core.connectionmanager.pool.AbstractPool.getSimpleConnection(AbstractPool.java:397)
+	at org.jboss.jca.core.connectionmanager.pool.AbstractPool.getConnection(AbstractPool.java:365)
+	at org.jboss.jca.core.connectionmanager.AbstractConnectionManager.getManagedConnection(AbstractConnectionManager.java:329)
+	... 67 more
+Caused by: javax.resource.ResourceException: Could not create connection
+	at org.jboss.jca.adapters.jdbc.local.LocalManagedConnectionFactory.getLocalManagedConnection(LocalManagedConnectionFactory.java:277)
+	at org.jboss.jca.adapters.jdbc.local.LocalManagedConnectionFactory.createManagedConnection(LocalManagedConnectionFactory.java:235)
+	at org.jboss.jca.core.connectionmanager.pool.mcp.SemaphoreArrayListManagedConnectionPool.createConnectionEventListener(SemaphoreArrayListManagedConnectionPool.java:761)
+	at org.jboss.jca.core.connectionmanager.pool.mcp.SemaphoreArrayListManagedConnectionPool.getConnection(SemaphoreArrayListManagedConnectionPool.java:343)
+	... 70 more
+Caused by: java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:445)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:389)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:382)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:600)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:450)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:192)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:380)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:760)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:401)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
+	at org.jboss.jca.adapters.jdbc.local.LocalManagedConnectionFactory.getLocalManagedConnection(LocalManagedConnectionFactory.java:249)
+	... 73 more
+03:42:09,133 ERROR [MSC service thread 1-4][PortalHibernateConfiguration:134] java.lang.RuntimeException: No dialect found
+java.lang.RuntimeException: No dialect found
+	at com.liferay.portal.spring.hibernate.DialectDetector.getDialect(DialectDetector.java:132)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.determineDialect(PortalHibernateConfiguration.java:82)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.newConfiguration(PortalHibernateConfiguration.java:116)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:549)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.buildSessionFactory(PortalHibernateConfiguration.java:65)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1479)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:630)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:441)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:982)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:878)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:484)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1085)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1085)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:410)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:282)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:204)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at com.liferay.portal.spring.context.PortalContextLoaderListener.contextInitialized(PortalContextLoaderListener.java:186)
+	at org.apache.catalina.core.StandardContext.contextListenerStart(StandardContext.java:3392)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3850)
+	at org.jboss.as.web.deployment.WebDeploymentService.start(WebDeploymentService.java:90)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+03:42:10,023 ERROR [MSC service thread 1-4][PortalContextLoaderListener:111] java.lang.NullPointerException
+java.lang.NullPointerException
+	at com.liferay.portal.kernel.servlet.DirectServletRegistryUtil.clearServlets(DirectServletRegistryUtil.java:27)
+	at com.liferay.portal.spring.context.PortalContextLoaderListener.contextDestroyed(PortalContextLoaderListener.java:108)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:3489)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:3999)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3917)
+	at org.jboss.as.web.deployment.WebDeploymentService.start(WebDeploymentService.java:90)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+03:42:10,027 ERROR [MSC service thread 1-4][PortalContextLoaderListener:118] java.lang.NullPointerException
+java.lang.NullPointerException
+	at com.liferay.portal.kernel.deploy.hot.HotDeployUtil.reset(HotDeployUtil.java:45)
+	at com.liferay.portal.spring.context.PortalContextLoaderListener.contextDestroyed(PortalContextLoaderListener.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:3489)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:3999)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3917)
+	at org.jboss.as.web.deployment.WebDeploymentService.start(WebDeploymentService.java:90)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+03:42:10,280 INFO  [MSC service thread 1-12][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook
+03:42:10,281 ERROR [MSC service thread 1-15][BasePortalLifecycle:34] java.lang.NullPointerException
+java.lang.NullPointerException
+	at com.liferay.portal.kernel.deploy.hot.HotDeployUtil.fireUndeployEvent(HotDeployUtil.java:31)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.fireUndeployEvent(PluginContextListener.java:169)
+	at com.liferay.portal.kernel.servlet.SecurePluginContextListener.fireUndeployEvent(SecurePluginContextListener.java:281)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.doPortalDestroy(PluginContextListener.java:132)
+	at com.liferay.portal.kernel.util.BasePortalLifecycle.portalDestroy(BasePortalLifecycle.java:31)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.contextDestroyed(PluginContextListener.java:97)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:3489)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:3999)
+	at org.jboss.as.web.deployment.WebDeploymentService.stop(WebDeploymentService.java:108)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.stopService(ServiceControllerImpl.java:1911)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.run(ServiceControllerImpl.java:1874)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+03:42:10,293 ERROR [MSC service thread 1-12][BasePortalLifecycle:34] java.lang.NullPointerException
+java.lang.NullPointerException
+	at com.liferay.portal.kernel.deploy.hot.HotDeployUtil.fireUndeployEvent(HotDeployUtil.java:31)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.fireUndeployEvent(PluginContextListener.java:169)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.doPortalDestroy(PluginContextListener.java:132)
+	at com.liferay.portal.kernel.util.BasePortalLifecycle.portalDestroy(BasePortalLifecycle.java:31)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.contextDestroyed(PluginContextListener.java:97)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:3489)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:3999)
+	at org.jboss.as.web.deployment.WebDeploymentService.stop(WebDeploymentService.java:108)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.stopService(ServiceControllerImpl.java:1911)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.run(ServiceControllerImpl.java:1874)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+03:44:12,589 ERROR [MSC service thread 1-2][DialectDetector:124] java.sql.SQLException: javax.resource.ResourceException: IJ000453: Unable to get managed connection for java:/jdbc/LiferayPool
+java.sql.SQLException: javax.resource.ResourceException: IJ000453: Unable to get managed connection for java:/jdbc/LiferayPool
+	at org.jboss.jca.adapters.jdbc.WrapperDataSource.getConnection(WrapperDataSource.java:137)
+	at com.liferay.portal.dao.jdbc.util.DataSourceWrapper.getConnection(DataSourceWrapper.java:39)
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.getTargetConnection(LazyConnectionDataSourceProxy.java:403)
+	at org.springframework.jdbc.datasource.LazyConnectionDataSourceProxy$LazyConnectionInvocationHandler.invoke(LazyConnectionDataSourceProxy.java:376)
+	at com.sun.proxy.$Proxy16.getMetaData(Unknown Source)
+	at com.liferay.portal.spring.hibernate.DialectDetector.getDialect(DialectDetector.java:56)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.determineDialect(PortalHibernateConfiguration.java:82)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.newConfiguration(PortalHibernateConfiguration.java:116)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:549)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.buildSessionFactory(PortalHibernateConfiguration.java:65)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1479)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:630)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:441)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:982)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:878)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:484)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1085)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1085)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:410)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:282)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:204)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at com.liferay.portal.spring.context.PortalContextLoaderListener.contextInitialized(PortalContextLoaderListener.java:186)
+	at org.apache.catalina.core.StandardContext.contextListenerStart(StandardContext.java:3392)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3850)
+	at org.jboss.as.web.deployment.WebDeploymentService.start(WebDeploymentService.java:90)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: javax.resource.ResourceException: IJ000453: Unable to get managed connection for java:/jdbc/LiferayPool
+	at org.jboss.jca.core.connectionmanager.AbstractConnectionManager.getManagedConnection(AbstractConnectionManager.java:390)
+	at org.jboss.jca.core.connectionmanager.tx.TxConnectionManagerImpl.getManagedConnection(TxConnectionManagerImpl.java:368)
+	at org.jboss.jca.core.connectionmanager.AbstractConnectionManager.allocateConnection(AbstractConnectionManager.java:464)
+	at org.jboss.jca.adapters.jdbc.WrapperDataSource.getConnection(WrapperDataSource.java:129)
+	... 64 more
+Caused by: javax.resource.ResourceException: IJ000658: Unexpected throwable while trying to create a connection: null
+	at org.jboss.jca.core.connectionmanager.pool.mcp.SemaphoreArrayListManagedConnectionPool.getConnection(SemaphoreArrayListManagedConnectionPool.java:371)
+	at org.jboss.jca.core.connectionmanager.pool.AbstractPool.getSimpleConnection(AbstractPool.java:397)
+	at org.jboss.jca.core.connectionmanager.pool.AbstractPool.getConnection(AbstractPool.java:365)
+	at org.jboss.jca.core.connectionmanager.AbstractConnectionManager.getManagedConnection(AbstractConnectionManager.java:329)
+	... 67 more
+Caused by: javax.resource.ResourceException: Could not create connection
+	at org.jboss.jca.adapters.jdbc.local.LocalManagedConnectionFactory.getLocalManagedConnection(LocalManagedConnectionFactory.java:277)
+	at org.jboss.jca.adapters.jdbc.local.LocalManagedConnectionFactory.createManagedConnection(LocalManagedConnectionFactory.java:235)
+	at org.jboss.jca.core.connectionmanager.pool.mcp.SemaphoreArrayListManagedConnectionPool.createConnectionEventListener(SemaphoreArrayListManagedConnectionPool.java:761)
+	at org.jboss.jca.core.connectionmanager.pool.mcp.SemaphoreArrayListManagedConnectionPool.getConnection(SemaphoreArrayListManagedConnectionPool.java:343)
+	... 70 more
+Caused by: java.sql.SQLException: ORA-01017: invalid username/password; logon denied
+
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:445)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:389)
+	at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:382)
+	at oracle.jdbc.driver.T4CTTIfun.processError(T4CTTIfun.java:600)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.processError(T4CTTIoauthenticate.java:445)
+	at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:450)
+	at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:192)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:380)
+	at oracle.jdbc.driver.T4CTTIoauthenticate.doOAUTH(T4CTTIoauthenticate.java:760)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:401)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:546)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:236)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:521)
+	at org.jboss.jca.adapters.jdbc.local.LocalManagedConnectionFactory.getLocalManagedConnection(LocalManagedConnectionFactory.java:249)
+	... 73 more
+03:44:12,633 ERROR [MSC service thread 1-2][PortalHibernateConfiguration:134] java.lang.RuntimeException: No dialect found
+java.lang.RuntimeException: No dialect found
+	at com.liferay.portal.spring.hibernate.DialectDetector.getDialect(DialectDetector.java:132)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.determineDialect(PortalHibernateConfiguration.java:82)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.newConfiguration(PortalHibernateConfiguration.java:116)
+	at org.springframework.orm.hibernate3.LocalSessionFactoryBean.buildSessionFactory(LocalSessionFactoryBean.java:549)
+	at com.liferay.portal.spring.hibernate.PortalHibernateConfiguration.buildSessionFactory(PortalHibernateConfiguration.java:65)
+	at org.springframework.orm.hibernate3.AbstractSessionFactoryBean.afterPropertiesSet(AbstractSessionFactoryBean.java:211)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1479)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:630)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:441)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:982)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:878)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:484)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1085)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:192)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:322)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:106)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1327)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1085)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:455)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:293)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:290)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.context.support.AbstractApplicationContext.registerBeanPostProcessors(AbstractApplicationContext.java:710)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:410)
+	at org.springframework.web.context.ContextLoader.createWebApplicationContext(ContextLoader.java:282)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:204)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:47)
+	at com.liferay.portal.spring.context.PortalContextLoaderListener.contextInitialized(PortalContextLoaderListener.java:186)
+	at org.apache.catalina.core.StandardContext.contextListenerStart(StandardContext.java:3392)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3850)
+	at org.jboss.as.web.deployment.WebDeploymentService.start(WebDeploymentService.java:90)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+03:44:13,569 ERROR [MSC service thread 1-2][PortalContextLoaderListener:111] java.lang.NullPointerException
+java.lang.NullPointerException
+	at com.liferay.portal.kernel.servlet.DirectServletRegistryUtil.clearServlets(DirectServletRegistryUtil.java:27)
+	at com.liferay.portal.spring.context.PortalContextLoaderListener.contextDestroyed(PortalContextLoaderListener.java:108)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:3489)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:3999)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3917)
+	at org.jboss.as.web.deployment.WebDeploymentService.start(WebDeploymentService.java:90)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+03:44:13,573 ERROR [MSC service thread 1-2][PortalContextLoaderListener:118] java.lang.NullPointerException
+java.lang.NullPointerException
+	at com.liferay.portal.kernel.deploy.hot.HotDeployUtil.reset(HotDeployUtil.java:45)
+	at com.liferay.portal.spring.context.PortalContextLoaderListener.contextDestroyed(PortalContextLoaderListener.java:115)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:3489)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:3999)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:3917)
+	at org.jboss.as.web.deployment.WebDeploymentService.start(WebDeploymentService.java:90)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811)
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+03:44:13,833 ERROR [MSC service thread 1-4][BasePortalLifecycle:34] java.lang.NullPointerException
+java.lang.NullPointerException
+	at com.liferay.portal.kernel.deploy.hot.HotDeployUtil.fireUndeployEvent(HotDeployUtil.java:31)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.fireUndeployEvent(PluginContextListener.java:169)
+	at com.liferay.portal.kernel.servlet.SecurePluginContextListener.fireUndeployEvent(SecurePluginContextListener.java:281)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.doPortalDestroy(PluginContextListener.java:132)
+	at com.liferay.portal.kernel.util.BasePortalLifecycle.portalDestroy(BasePortalLifecycle.java:31)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.contextDestroyed(PluginContextListener.java:97)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:3489)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:3999)
+	at org.jboss.as.web.deployment.WebDeploymentService.stop(WebDeploymentService.java:108)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.stopService(ServiceControllerImpl.java:1911)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.run(ServiceControllerImpl.java:1874)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+03:44:13,856 INFO  [MSC service thread 1-2][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook
+03:44:13,857 ERROR [MSC service thread 1-2][BasePortalLifecycle:34] java.lang.NullPointerException
+java.lang.NullPointerException
+	at com.liferay.portal.kernel.deploy.hot.HotDeployUtil.fireUndeployEvent(HotDeployUtil.java:31)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.fireUndeployEvent(PluginContextListener.java:169)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.doPortalDestroy(PluginContextListener.java:132)
+	at com.liferay.portal.kernel.util.BasePortalLifecycle.portalDestroy(BasePortalLifecycle.java:31)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.contextDestroyed(PluginContextListener.java:97)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:3489)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:3999)
+	at org.jboss.as.web.deployment.WebDeploymentService.stop(WebDeploymentService.java:108)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.stopService(ServiceControllerImpl.java:1911)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.run(ServiceControllerImpl.java:1874)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+03:46:36,782 INFO  [MSC service thread 1-3][DialectDetector:71] Determine dialect for Oracle 11
+03:46:36,796 INFO  [MSC service thread 1-3][DialectDetector:136] Found dialect org.hibernate.dialect.Oracle10gDialect
+03:46:45,826 WARN  [MSC service thread 1-3][PDFProcessorImpl:235] Liferay is not configured to use ImageMagick. For better quality document and image previews, install ImageMagick and enable it in portal-ext.properties or in the Server Administration control panel at: http://<server>/group/control_panel/manage/-/server/external-services
+03:46:52,632 WARN  [MSC service thread 1-3][ReleaseLocalServiceImpl:154] ORA-00942: table or view does not exist
+
+03:46:52,635 INFO  [MSC service thread 1-3][ReleaseLocalServiceImpl:86] Create tables and populate with default data
+03:47:41,298 INFO  [MSC service thread 1-3][BaseDB:478] Database supports case sensitive queries
+03:47:43,491 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyProcessSuite
+03:47:43,494 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyProperties
+03:47:43,520 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyDB2
+03:47:43,521 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyMySQL
+03:47:43,523 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyOracle
+03:47:48,675 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifySQLServer
+03:47:48,677 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyCounter
+03:47:48,750 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyUUID
+03:47:48,814 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyPermission
+03:47:53,197 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyRole
+03:47:53,199 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyAsset
+03:47:53,205 INFO  [MSC service thread 1-3][UpgradeProcess:175] Upgrading com.liferay.portal.upgrade.util.UpgradeAssetPublisherManualEntries
+03:47:53,224 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyBlogs
+03:47:53,292 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyBookmarks
+03:47:53,327 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyCalendar
+03:47:53,343 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyDocumentLibrary
+03:47:53,487 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyGroup
+03:47:53,543 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyJournal
+03:47:53,574 INFO  [MSC service thread 1-3][VerifyJournal:314] Do not fix oracle new line
+03:47:53,611 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyLayout
+03:47:53,635 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyMessageBoards
+03:47:53,691 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyOrganization
+03:47:53,696 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyResourcePermissions
+03:47:53,706 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifySocial
+03:47:53,709 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyUser
+03:47:53,773 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyWiki
+03:47:53,796 INFO  [MSC service thread 1-3][VerifyProcess:55] Verifying com.liferay.portal.verify.VerifyWorkflow
+03:47:53,891 INFO  [MSC service thread 1-3][LicenseManager:?] Portal Development license validation passed
+03:47:54,664 INFO  [MSC service thread 1-3][ServerDetector:169] Server supports hot deploy
+03:47:54,669 INFO  [MSC service thread 1-3][PluginPackageUtil:1046] Reading plugin package for the root context
+03:47:56,119 INFO  [MSC service thread 1-3][AutoDeployDir:144] Auto deploy scanner started for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy
+03:49:58,761 INFO  [http--0.0.0.0-8080-2][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook
+03:49:58,795 INFO  [http--0.0.0.0-8080-2][HotDeployImpl:239] Queueing marketplace-portlet for deploy because it is missing portal-compat-hook
+03:49:58,825 INFO  [http--0.0.0.0-8080-2][HotDeployImpl:185] Deploying portal-compat-hook from queue
+03:49:58,827 INFO  [http--0.0.0.0-8080-2][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+03:49:58,979 INFO  [http--0.0.0.0-8080-2][HookHotDeployListener:584] Registering hook for portal-compat-hook
+03:49:59,355 INFO  [http--0.0.0.0-8080-2][HookHotDeployListener:711] Hook for portal-compat-hook is available for use
+03:49:59,358 INFO  [http--0.0.0.0-8080-2][HotDeployImpl:185] Deploying marketplace-portlet from queue
+03:49:59,359 INFO  [http--0.0.0.0-8080-2][PluginPackageUtil:1049] Reading plugin package for marketplace-portlet
+03:49:59,455 INFO  [http--0.0.0.0-8080-2][ServiceComponentLocalServiceImpl:280] Running Marketplace SQL scripts
+03:50:00,978 INFO  [http--0.0.0.0-8080-2][HookHotDeployListener:584] Registering hook for marketplace-portlet
+03:50:01,018 INFO  [http--0.0.0.0-8080-2][HookHotDeployListener:711] Hook for marketplace-portlet is available for use
+03:50:01,020 INFO  [http--0.0.0.0-8080-2][PortletHotDeployListener:295] Registering portlets for marketplace-portlet
+03:50:01,177 INFO  [http--0.0.0.0-8080-2][PortletHotDeployListener:459] 2 portlets for marketplace-portlet are available for use
+03:50:01,857 INFO  [com.liferay.portal.plugin.PluginPackageUtil][PluginPackageUtil:1438] Checking for available updates
+03:50:09,420 INFO  [com.liferay.portal.plugin.PluginPackageUtil][PluginPackageUtil:1482] Finished checking for available updates in 7562 ms
+03:51:18,122 INFO  [MSC service thread 1-6][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook
+03:51:18,122 INFO  [MSC service thread 1-12][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+03:51:18,150 INFO  [MSC service thread 1-12][HookHotDeployListener:834] Hook for portal-compat-hook was unregistered
+03:51:18,157 INFO  [MSC service thread 1-6][PluginPackageUtil:1049] Reading plugin package for marketplace-portlet
+03:51:18,174 INFO  [MSC service thread 1-6][HookHotDeployListener:834] Hook for marketplace-portlet was unregistered
+03:51:18,185 INFO  [MSC service thread 1-6][PortletHotDeployListener:491] Unregistering portlets for marketplace-portlet
+03:51:18,194 ERROR [MSC service thread 1-6][HotDeployImpl:113] com.liferay.portal.kernel.deploy.hot.HotDeployException: Error unregistering portlets for marketplace-portlet
+com.liferay.portal.kernel.deploy.hot.HotDeployException: Error unregistering portlets for marketplace-portlet
+	at com.liferay.portal.kernel.deploy.hot.BaseHotDeployListener.throwHotDeployException(BaseHotDeployListener.java:46)
+	at com.liferay.portal.deploy.hot.PortletHotDeployListener.invokeUndeploy(PortletHotDeployListener.java:136)
+	at com.liferay.portal.deploy.hot.HotDeployImpl.fireUndeployEvent(HotDeployImpl.java:110)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.liferay.portal.security.lang.DoPrivilegedHandler.doInvoke(DoPrivilegedHandler.java:88)
+	at com.liferay.portal.security.lang.DoPrivilegedHandler.invoke(DoPrivilegedHandler.java:56)
+	at com.sun.proxy.$Proxy35.fireUndeployEvent(Unknown Source)
+	at com.liferay.portal.kernel.deploy.hot.HotDeployUtil.fireUndeployEvent(HotDeployUtil.java:31)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.fireUndeployEvent(PluginContextListener.java:169)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.doPortalDestroy(PluginContextListener.java:132)
+	at com.liferay.portal.kernel.util.BasePortalLifecycle.portalDestroy(BasePortalLifecycle.java:31)
+	at com.liferay.portal.kernel.servlet.PluginContextListener.contextDestroyed(PluginContextListener.java:97)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:3489)
+	at org.apache.catalina.core.StandardContext.stop(StandardContext.java:3999)
+	at org.jboss.as.web.deployment.WebDeploymentService.stop(WebDeploymentService.java:108)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.stopService(ServiceControllerImpl.java:1911)
+	at org.jboss.msc.service.ServiceControllerImpl$StopTask.run(ServiceControllerImpl.java:1874)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.runTask(ThreadPoolExecutor.java:895)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:918)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: java.util.ConcurrentModificationException
+	at java.util.HashMap$HashIterator.nextEntry(HashMap.java:793)
+	at java.util.HashMap$ValueIterator.next(HashMap.java:822)
+	at com.liferay.portal.javadoc.JavadocManagerImpl.unload(JavadocManagerImpl.java:309)
+	at com.liferay.portal.javadoc.JavadocManagerImpl.unload(JavadocManagerImpl.java:133)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at com.liferay.portal.security.lang.DoPrivilegedHandler.doInvoke(DoPrivilegedHandler.java:88)
+	at com.liferay.portal.security.lang.DoPrivilegedHandler.invoke(DoPrivilegedHandler.java:56)
+	at com.sun.proxy.$Proxy42.unload(Unknown Source)
+	at com.liferay.portal.kernel.javadoc.JavadocManagerUtil.unload(JavadocManagerUtil.java:43)
+	at com.liferay.portal.deploy.hot.PortletHotDeployListener.doInvokeUndeploy(PortletHotDeployListener.java:518)
+	at com.liferay.portal.deploy.hot.PortletHotDeployListener.invokeUndeploy(PortletHotDeployListener.java:133)
+	... 21 more
+03:52:36,785 INFO  [MSC service thread 1-8][DialectDetector:71] Determine dialect for Oracle 11
+03:52:36,798 INFO  [MSC service thread 1-8][DialectDetector:136] Found dialect org.hibernate.dialect.Oracle10gDialect
+03:52:45,552 WARN  [MSC service thread 1-8][PDFProcessorImpl:235] Liferay is not configured to use ImageMagick. For better quality document and image previews, install ImageMagick and enable it in portal-ext.properties or in the Server Administration control panel at: http://<server>/group/control_panel/manage/-/server/external-services
+03:52:50,408 INFO  [MSC service thread 1-8][BaseDB:478] Database supports case sensitive queries
+03:52:50,778 INFO  [MSC service thread 1-8][LicenseManager:?] Portal Development license validation passed
+03:52:52,086 INFO  [MSC service thread 1-8][ServerDetector:169] Server supports hot deploy
+03:52:52,092 INFO  [MSC service thread 1-8][PluginPackageUtil:1046] Reading plugin package for the root context
+03:52:55,880 INFO  [MSC service thread 1-8][AutoDeployDir:144] Auto deploy scanner started for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy
+03:52:57,068 INFO  [MSC service thread 1-8][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook
+03:52:57,092 INFO  [MSC service thread 1-8][HotDeployImpl:239] Queueing marketplace-portlet for deploy because it is missing portal-compat-hook
+03:52:57,113 INFO  [MSC service thread 1-8][HotDeployImpl:185] Deploying portal-compat-hook from queue
+03:52:57,114 INFO  [MSC service thread 1-8][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+03:52:57,202 INFO  [MSC service thread 1-8][HookHotDeployListener:584] Registering hook for portal-compat-hook
+03:52:57,366 INFO  [MSC service thread 1-8][HookHotDeployListener:711] Hook for portal-compat-hook is available for use
+03:52:57,368 INFO  [MSC service thread 1-8][HotDeployImpl:185] Deploying marketplace-portlet from queue
+03:52:57,369 INFO  [MSC service thread 1-8][PluginPackageUtil:1049] Reading plugin package for marketplace-portlet
+03:52:57,713 INFO  [MSC service thread 1-8][HookHotDeployListener:584] Registering hook for marketplace-portlet
+03:52:57,725 INFO  [MSC service thread 1-8][HookHotDeployListener:711] Hook for marketplace-portlet is available for use
+03:52:57,727 INFO  [MSC service thread 1-8][PortletHotDeployListener:295] Registering portlets for marketplace-portlet
+03:52:57,812 INFO  [MSC service thread 1-8][PortletHotDeployListener:459] 2 portlets for marketplace-portlet are available for use
+03:52:57,965 INFO  [liferay/scheduler_dispatch-1][PluginPackageUtil:1308] Reloading repositories
+03:53:14,614 INFO  [com.liferay.portal.plugin.PluginPackageUtil][PluginPackageUtil:1438] Checking for available updates
+03:53:14,618 INFO  [com.liferay.portal.plugin.PluginPackageUtil][PluginPackageUtil:1482] Finished checking for available updates in 1 ms
+03:56:50,902 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing 15502140_27502983_27502990.lpkg
+03:56:50,906 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:50] Extracting Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15502140_27502983_27502990.lpkg
+03:56:50,910 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war from 15502140_27502983_27502990.lpkg
+03:56:50,915 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war from 15502140_27502983_27502990.lpkg
+03:56:50,921 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting liferay-marketplace.properties from 15502140_27502983_27502990.lpkg
+03:56:50,924 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:56] Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15502140_27502983_27502990.lpkg extracted successfully. Deployment will start in a few seconds.
+03:56:50,927 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing 15473837_17176416_17176418.lpkg
+03:56:50,929 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:50] Extracting Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15473837_17176416_17176418.lpkg
+03:56:50,930 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war from 15473837_17176416_17176418.lpkg
+03:56:50,931 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting liferay-marketplace.properties from 15473837_17176416_17176418.lpkg
+03:56:50,931 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:56] Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15473837_17176416_17176418.lpkg extracted successfully. Deployment will start in a few seconds.
+03:56:53,933 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:56:53,936 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:56:53,941 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:56:53,944 ERROR [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:246] com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:209)
+	at com.liferay.portal.deploy.auto.HookAutoDeployListener.deploy(HookAutoDeployListener.java:53)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.deploy(AutoDeployDir.java:51)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.processFile(AutoDeployDir.java:230)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.scanDirectory(AutoDeployDir.java:271)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployScanner.run(AutoDeployScanner.java:54)
+Caused by: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.deployFile(BaseDeployer.java:852)
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:206)
+	... 5 more
+03:56:53,962 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war
+03:56:53,963 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][WebAutoDeployListener:50] Copying web plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war
+03:56:53,964 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war
+03:56:54,256 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2233] Modifying Servlet 2.4 /tmp/20130909035653966/WEB-INF/web.xml
+03:56:54,341 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][WebAutoDeployListener:56] Web plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war copied successfully. Deployment will start in a few seconds.
+03:56:54,342 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+03:56:54,343 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+03:56:54,345 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+03:56:54,350 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:916] Updating Portal Compatibility EE from version 6.1.20.1-ee-ga3 to version 6.1.20.1-ee-ga3-20130812170130063
+03:56:54,422 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2233] Modifying Servlet 2.4 /tmp/20130909035654352/WEB-INF/web.xml
+03:56:54,446 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:56] Hook for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war copied successfully. Deployment will start in a few seconds.
+03:56:55,588 INFO  [MSC service thread 1-2][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+03:56:55,601 INFO  [MSC service thread 1-2][HookHotDeployListener:834] Hook for portal-compat-hook was unregistered
+03:56:56,008 INFO  [MSC service thread 1-2][HotDeployEvent:109] Plugin resources-importer-web requires portal-compat-hook
+03:56:56,100 INFO  [MSC service thread 1-2][HotDeployImpl:239] Queueing resources-importer-web for deploy because it is missing portal-compat-hook
+03:56:56,128 INFO  [MSC service thread 1-15][HotDeployImpl:185] Deploying portal-compat-hook from queue
+03:56:56,129 INFO  [MSC service thread 1-15][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+03:56:56,198 INFO  [MSC service thread 1-15][HookHotDeployListener:584] Registering hook for portal-compat-hook
+03:56:56,241 INFO  [MSC service thread 1-15][HookHotDeployListener:711] Hook for portal-compat-hook is available for use
+03:56:56,243 INFO  [MSC service thread 1-15][HotDeployImpl:185] Deploying resources-importer-web from queue
+03:56:56,244 INFO  [MSC service thread 1-15][PluginPackageUtil:1049] Reading plugin package for resources-importer-web
+03:56:57,448 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:220] Processing private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war. This is attempt 2.
+03:56:57,450 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:56:57,451 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:56:57,451 ERROR [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:246] com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:209)
+	at com.liferay.portal.deploy.auto.HookAutoDeployListener.deploy(HookAutoDeployListener.java:53)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.deploy(AutoDeployDir.java:51)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.processFile(AutoDeployDir.java:230)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.scanDirectory(AutoDeployDir.java:271)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployScanner.run(AutoDeployScanner.java:54)
+Caused by: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.deployFile(BaseDeployer.java:852)
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:206)
+	... 5 more
+03:57:00,457 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:220] Processing private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war. This is attempt 3.
+03:57:00,460 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:00,463 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:00,465 ERROR [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:246] com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:209)
+	at com.liferay.portal.deploy.auto.HookAutoDeployListener.deploy(HookAutoDeployListener.java:53)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.deploy(AutoDeployDir.java:51)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.processFile(AutoDeployDir.java:230)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.scanDirectory(AutoDeployDir.java:271)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployScanner.run(AutoDeployScanner.java:54)
+Caused by: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.deployFile(BaseDeployer.java:852)
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:206)
+	... 5 more
+03:57:03,470 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:220] Processing private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war. This is attempt 4.
+03:57:03,473 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:03,476 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:03,477 ERROR [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:246] com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:209)
+	at com.liferay.portal.deploy.auto.HookAutoDeployListener.deploy(HookAutoDeployListener.java:53)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.deploy(AutoDeployDir.java:51)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.processFile(AutoDeployDir.java:230)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.scanDirectory(AutoDeployDir.java:271)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployScanner.run(AutoDeployScanner.java:54)
+Caused by: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.deployFile(BaseDeployer.java:852)
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:206)
+	... 5 more
+03:57:06,490 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:220] Processing private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war. This is attempt 5.
+03:57:06,498 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:06,501 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:06,502 ERROR [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:246] com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:209)
+	at com.liferay.portal.deploy.auto.HookAutoDeployListener.deploy(HookAutoDeployListener.java:53)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.deploy(AutoDeployDir.java:51)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.processFile(AutoDeployDir.java:230)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.scanDirectory(AutoDeployDir.java:271)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployScanner.run(AutoDeployScanner.java:54)
+Caused by: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.deployFile(BaseDeployer.java:852)
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:206)
+	... 5 more
+03:57:09,507 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:220] Processing private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war. This is attempt 6.
+03:57:09,510 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:09,512 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:09,514 ERROR [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:246] com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:209)
+	at com.liferay.portal.deploy.auto.HookAutoDeployListener.deploy(HookAutoDeployListener.java:53)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.deploy(AutoDeployDir.java:51)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.processFile(AutoDeployDir.java:230)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.scanDirectory(AutoDeployDir.java:271)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployScanner.run(AutoDeployScanner.java:54)
+Caused by: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.deployFile(BaseDeployer.java:852)
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:206)
+	... 5 more
+03:57:12,527 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:220] Processing private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war. This is attempt 7.
+03:57:12,530 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:12,533 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:12,535 ERROR [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:246] com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:209)
+	at com.liferay.portal.deploy.auto.HookAutoDeployListener.deploy(HookAutoDeployListener.java:53)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.deploy(AutoDeployDir.java:51)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.processFile(AutoDeployDir.java:230)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.scanDirectory(AutoDeployDir.java:271)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployScanner.run(AutoDeployScanner.java:54)
+Caused by: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.deployFile(BaseDeployer.java:852)
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:206)
+	... 5 more
+03:57:15,541 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:220] Processing private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war. This is attempt 8.
+03:57:15,544 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:15,547 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:15,549 ERROR [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:246] com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:209)
+	at com.liferay.portal.deploy.auto.HookAutoDeployListener.deploy(HookAutoDeployListener.java:53)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.deploy(AutoDeployDir.java:51)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.processFile(AutoDeployDir.java:230)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.scanDirectory(AutoDeployDir.java:271)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployScanner.run(AutoDeployScanner.java:54)
+Caused by: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.deployFile(BaseDeployer.java:852)
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:206)
+	... 5 more
+03:57:18,563 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:220] Processing private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war. This is attempt 9.
+03:57:18,565 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:18,568 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war
+03:57:18,570 ERROR [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:246] com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+com.liferay.portal.kernel.deploy.auto.AutoDeployException: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:209)
+	at com.liferay.portal.deploy.auto.HookAutoDeployListener.deploy(HookAutoDeployListener.java:53)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.deploy(AutoDeployDir.java:51)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.processFile(AutoDeployDir.java:230)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployDir.scanDirectory(AutoDeployDir.java:271)
+	at com.liferay.portal.kernel.deploy.auto.AutoDeployScanner.run(AutoDeployScanner.java:54)
+Caused by: com.liferay.portal.kernel.deploy.auto.AutoDeployException: private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war does not support this version of Liferay
+	at com.liferay.portal.tools.deploy.BaseDeployer.deployFile(BaseDeployer.java:852)
+	at com.liferay.portal.tools.deploy.BaseDeployer.autoDeploy(BaseDeployer.java:206)
+	... 5 more
+03:57:18,584 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:252] Add private-plugin-installer-hook-6.1.20.1-ee-ga2-20120808151048271.war to the blacklist
+04:08:30,645 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing 15473837_27502839_27502855.lpkg
+04:08:30,648 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:50] Extracting Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15473837_27502839_27502855.lpkg
+04:08:30,650 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war from 15473837_27502839_27502855.lpkg
+04:08:30,655 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting private-plugin-installer-hook-6.1.20.2-ee-ga3-20130812170130063.war from 15473837_27502839_27502855.lpkg
+04:08:30,660 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting liferay-marketplace.properties from 15473837_27502839_27502855.lpkg
+04:08:30,663 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:56] Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15473837_27502839_27502855.lpkg extracted successfully. Deployment will start in a few seconds.
+04:08:33,665 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing private-plugin-installer-hook-6.1.20.2-ee-ga3-20130812170130063.war
+04:08:33,668 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.2-ee-ga3-20130812170130063.war
+04:08:33,671 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying private-plugin-installer-hook-6.1.20.2-ee-ga3-20130812170130063.war
+04:08:33,755 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2233] Modifying Servlet 2.4 /tmp/20130909040833673/WEB-INF/web.xml
+04:08:33,827 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:56] Hook for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.2-ee-ga3-20130812170130063.war copied successfully. Deployment will start in a few seconds.
+04:08:33,828 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+04:08:33,829 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+04:08:33,830 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+04:08:33,832 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:916] Updating Portal Compatibility EE from version 6.1.20.1-ee-ga3-20130812170130063 to version 6.1.20.1-ee-ga3-20130812170130063
+04:08:33,893 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2233] Modifying Servlet 2.4 /tmp/20130909040833833/WEB-INF/web.xml
+04:08:33,926 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:56] Hook for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war copied successfully. Deployment will start in a few seconds.
+04:08:36,884 INFO  [MSC service thread 1-13][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+04:08:36,945 INFO  [MSC service thread 1-13][HookHotDeployListener:834] Hook for portal-compat-hook was unregistered
+04:08:37,484 INFO  [MSC service thread 1-3][HotDeployEvent:109] Plugin private-plugin-installer-hook requires portal-compat-hook
+04:08:37,609 INFO  [MSC service thread 1-3][HotDeployImpl:239] Queueing private-plugin-installer-hook for deploy because it is missing portal-compat-hook
+04:08:37,640 INFO  [MSC service thread 1-4][HotDeployImpl:185] Deploying portal-compat-hook from queue
+04:08:37,641 INFO  [MSC service thread 1-4][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+04:08:37,700 INFO  [MSC service thread 1-4][HookHotDeployListener:584] Registering hook for portal-compat-hook
+04:08:37,734 INFO  [MSC service thread 1-4][HookHotDeployListener:711] Hook for portal-compat-hook is available for use
+04:08:37,736 INFO  [MSC service thread 1-4][HotDeployImpl:185] Deploying private-plugin-installer-hook from queue
+04:08:37,736 INFO  [MSC service thread 1-4][PluginPackageUtil:1049] Reading plugin package for private-plugin-installer-hook
+04:08:37,809 INFO  [MSC service thread 1-4][HookHotDeployListener:584] Registering hook for private-plugin-installer-hook
+04:08:37,879 INFO  [MSC service thread 1-4][HookHotDeployListener:711] Hook for private-plugin-installer-hook is available for use
+04:13:27,966 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing 15502140_27502983_27502990.lpkg
+04:13:27,969 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:50] Extracting Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15502140_27502983_27502990.lpkg
+04:13:27,973 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war from 15502140_27502983_27502990.lpkg
+04:13:27,977 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war from 15502140_27502983_27502990.lpkg
+04:13:27,982 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting liferay-marketplace.properties from 15502140_27502983_27502990.lpkg
+04:13:27,983 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:56] Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15502140_27502983_27502990.lpkg extracted successfully. Deployment will start in a few seconds.
+04:13:30,985 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war
+04:13:30,989 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][WebAutoDeployListener:50] Copying web plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war
+04:13:30,992 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war
+04:13:30,995 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:916] Updating Resources Importer EE from version 6.1.20.3-ee-ga3-20130812170130063 to version 6.1.20.3-ee-ga3-20130812170130063
+04:13:31,046 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2233] Modifying Servlet 2.4 /tmp/20130909041330996/WEB-INF/web.xml
+04:13:31,092 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][WebAutoDeployListener:56] Web plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war copied successfully. Deployment will start in a few seconds.
+04:13:31,093 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+04:13:31,094 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+04:13:31,094 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+04:13:31,096 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:916] Updating Portal Compatibility EE from version 6.1.20.1-ee-ga3-20130812170130063 to version 6.1.20.1-ee-ga3-20130812170130063
+04:13:31,138 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2233] Modifying Servlet 2.4 /tmp/20130909041331098/WEB-INF/web.xml
+04:13:31,156 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:56] Hook for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war copied successfully. Deployment will start in a few seconds.
+04:13:33,333 INFO  [MSC service thread 1-2][HotDeployEvent:109] Plugin resources-importer-web requires portal-compat-hook
+04:13:33,336 INFO  [MSC service thread 1-2][PluginPackageUtil:1049] Reading plugin package for resources-importer-web
+04:13:33,565 INFO  [MSC service thread 1-11][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+04:13:33,604 INFO  [MSC service thread 1-11][HookHotDeployListener:834] Hook for portal-compat-hook was unregistered
+04:13:34,031 INFO  [MSC service thread 1-15][HotDeployEvent:109] Plugin resources-importer-web requires portal-compat-hook
+04:13:34,064 INFO  [MSC service thread 1-15][HotDeployImpl:239] Queueing resources-importer-web for deploy because it is missing portal-compat-hook
+04:13:34,150 INFO  [MSC service thread 1-7][HotDeployImpl:185] Deploying portal-compat-hook from queue
+04:13:34,151 INFO  [MSC service thread 1-7][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+04:13:34,220 INFO  [MSC service thread 1-7][HookHotDeployListener:584] Registering hook for portal-compat-hook
+04:13:34,260 INFO  [MSC service thread 1-7][HookHotDeployListener:711] Hook for portal-compat-hook is available for use
+04:13:34,262 INFO  [MSC service thread 1-7][HotDeployImpl:185] Deploying resources-importer-web from queue
+04:13:34,262 INFO  [MSC service thread 1-7][PluginPackageUtil:1049] Reading plugin package for resources-importer-web
+04:15:19,167 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing 15502140_27502983_27502990.lpkg
+04:15:19,170 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:50] Extracting Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15502140_27502983_27502990.lpkg
+04:15:19,172 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war from 15502140_27502983_27502990.lpkg
+04:15:19,177 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war from 15502140_27502983_27502990.lpkg
+04:15:19,183 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting liferay-marketplace.properties from 15502140_27502983_27502990.lpkg
+04:15:19,186 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:56] Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15502140_27502983_27502990.lpkg extracted successfully. Deployment will start in a few seconds.
+04:15:19,189 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing 15473837_27502839_27502855.lpkg
+04:15:19,190 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:50] Extracting Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15473837_27502839_27502855.lpkg
+04:15:19,193 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war from 15473837_27502839_27502855.lpkg
+04:15:19,197 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting private-plugin-installer-hook-6.1.20.2-ee-ga3-20130812170130063.war from 15473837_27502839_27502855.lpkg
+04:15:19,199 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployer:90] Extracting liferay-marketplace.properties from 15473837_27502839_27502855.lpkg
+04:15:19,200 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LiferayPackageAutoDeployListener:56] Liferay package for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/15473837_27502839_27502855.lpkg extracted successfully. Deployment will start in a few seconds.
+04:15:22,202 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing private-plugin-installer-hook-6.1.20.2-ee-ga3-20130812170130063.war
+04:15:22,204 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.2-ee-ga3-20130812170130063.war
+04:15:22,207 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying private-plugin-installer-hook-6.1.20.2-ee-ga3-20130812170130063.war
+04:15:22,211 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:916] Updating Private Plugin Installer EE from version 6.1.20.2-ee-ga3-20130812170130063 to version 6.1.20.2-ee-ga3-20130812170130063
+04:15:22,266 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2233] Modifying Servlet 2.4 /tmp/20130909041522214/WEB-INF/web.xml
+04:15:22,292 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:56] Hook for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/private-plugin-installer-hook-6.1.20.2-ee-ga3-20130812170130063.war copied successfully. Deployment will start in a few seconds.
+04:15:22,294 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war
+04:15:22,295 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][WebAutoDeployListener:50] Copying web plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war
+04:15:22,296 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war
+04:15:22,301 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:916] Updating Resources Importer EE from version 6.1.20.3-ee-ga3-20130812170130063 to version 6.1.20.3-ee-ga3-20130812170130063
+04:15:22,351 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2233] Modifying Servlet 2.4 /tmp/20130909041522302/WEB-INF/web.xml
+04:15:22,363 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][WebAutoDeployListener:56] Web plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/resources-importer-web-6.1.20.3-ee-ga3-20130812170130063.war copied successfully. Deployment will start in a few seconds.
+04:15:22,364 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+04:15:22,365 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:50] Copying hook plugin for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+04:15:22,366 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war
+04:15:22,367 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:916] Updating Portal Compatibility EE from version 6.1.20.1-ee-ga3-20130812170130063 to version 6.1.20.1-ee-ga3-20130812170130063
+04:15:22,412 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2233] Modifying Servlet 2.4 /tmp/20130909041522368/WEB-INF/web.xml
+04:15:22,426 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][HookAutoDeployListener:56] Hook for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/portal-compat-hook-6.1.20.1-ee-ga3-20130812170130063.war copied successfully. Deployment will start in a few seconds.
+04:15:24,734 INFO  [MSC service thread 1-4][HotDeployEvent:109] Plugin resources-importer-web requires portal-compat-hook
+04:15:24,735 INFO  [MSC service thread 1-4][PluginPackageUtil:1049] Reading plugin package for resources-importer-web
+04:15:24,874 INFO  [MSC service thread 1-12][HotDeployEvent:109] Plugin private-plugin-installer-hook requires portal-compat-hook
+04:15:24,874 INFO  [MSC service thread 1-12][PluginPackageUtil:1049] Reading plugin package for private-plugin-installer-hook
+04:15:24,964 INFO  [MSC service thread 1-12][HookHotDeployListener:834] Hook for private-plugin-installer-hook was unregistered
+04:15:24,996 INFO  [MSC service thread 1-14][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+04:15:25,033 INFO  [MSC service thread 1-14][HookHotDeployListener:834] Hook for portal-compat-hook was unregistered
+04:15:25,643 INFO  [MSC service thread 1-15][HotDeployEvent:109] Plugin private-plugin-installer-hook requires portal-compat-hook
+04:15:25,747 INFO  [MSC service thread 1-9][HotDeployEvent:109] Plugin resources-importer-web requires portal-compat-hook
+04:15:25,765 INFO  [MSC service thread 1-15][HotDeployImpl:239] Queueing private-plugin-installer-hook for deploy because it is missing portal-compat-hook
+04:15:25,877 INFO  [MSC service thread 1-9][HotDeployImpl:239] Queueing resources-importer-web for deploy because it is missing portal-compat-hook
+04:15:25,911 INFO  [MSC service thread 1-11][HotDeployImpl:185] Deploying portal-compat-hook from queue
+04:15:25,912 INFO  [MSC service thread 1-11][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+04:15:25,970 INFO  [MSC service thread 1-11][HookHotDeployListener:584] Registering hook for portal-compat-hook
+04:15:26,011 INFO  [MSC service thread 1-11][HookHotDeployListener:711] Hook for portal-compat-hook is available for use
+04:15:26,013 INFO  [MSC service thread 1-11][HotDeployImpl:185] Deploying private-plugin-installer-hook from queue
+04:15:26,014 INFO  [MSC service thread 1-11][PluginPackageUtil:1049] Reading plugin package for private-plugin-installer-hook
+04:15:26,134 INFO  [MSC service thread 1-11][HookHotDeployListener:584] Registering hook for private-plugin-installer-hook
+04:15:26,192 INFO  [MSC service thread 1-11][HookHotDeployListener:711] Hook for private-plugin-installer-hook is available for use
+04:15:26,193 INFO  [MSC service thread 1-11][HotDeployImpl:185] Deploying resources-importer-web from queue
+04:15:26,194 INFO  [MSC service thread 1-11][PluginPackageUtil:1049] Reading plugin package for resources-importer-web
+04:15:44,260 INFO  [com.liferay.portal.plugin.PluginPackageUtil][PluginPackageUtil:1438] Checking for available updates
+04:15:44,262 INFO  [com.liferay.portal.plugin.PluginPackageUtil][PluginPackageUtil:1482] Finished checking for available updates in 1 ms
+04:16:27,100 INFO  [MSC service thread 1-9][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook
+04:16:27,133 INFO  [MSC service thread 1-7][HotDeployEvent:109] Plugin private-plugin-installer-hook requires portal-compat-hook
+04:16:27,131 INFO  [MSC service thread 1-13][HotDeployEvent:109] Plugin resources-importer-web requires portal-compat-hook
+04:16:27,131 INFO  [MSC service thread 1-12][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+04:16:27,156 INFO  [MSC service thread 1-12][HookHotDeployListener:834] Hook for portal-compat-hook was unregistered
+04:16:27,156 INFO  [MSC service thread 1-13][PluginPackageUtil:1049] Reading plugin package for resources-importer-web
+04:16:27,164 INFO  [MSC service thread 1-7][PluginPackageUtil:1049] Reading plugin package for private-plugin-installer-hook
+04:16:27,233 INFO  [MSC service thread 1-7][HookHotDeployListener:834] Hook for private-plugin-installer-hook was unregistered
