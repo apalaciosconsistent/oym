@@ -1,0 +1,87 @@
+23:20:24,879 INFO  [MSC service thread 1-3][DialectDetector:71] Determine dialect for Oracle 11
+23:20:24,894 INFO  [MSC service thread 1-3][DialectDetector:136] Found dialect org.hibernate.dialect.Oracle10gDialect
+23:20:34,807 WARN  [MSC service thread 1-3][PDFProcessorImpl:235] Liferay is not configured to use ImageMagick. For better quality document and image previews, install ImageMagick and enable it in portal-ext.properties or in the Server Administration control panel at: http://<server>/group/control_panel/manage/-/server/external-services
+23:20:39,422 INFO  [MSC service thread 1-3][BaseDB:478] Database supports case sensitive queries
+23:20:39,881 INFO  [MSC service thread 1-3][LicenseManager:?] Portal Development license validation passed
+23:20:41,717 INFO  [MSC service thread 1-3][ServerDetector:169] Server supports hot deploy
+23:20:41,722 INFO  [MSC service thread 1-3][PluginPackageUtil:1046] Reading plugin package for the root context
+23:20:43,564 INFO  [MSC service thread 1-3][AutoDeployDir:144] Auto deploy scanner started for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy
+23:20:45,215 INFO  [MSC service thread 1-3][HotDeployImpl:185] Deploying portal-compat-hook from queue
+23:20:45,217 INFO  [MSC service thread 1-3][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+23:20:45,287 INFO  [MSC service thread 1-3][HookHotDeployListener:584] Registering hook for portal-compat-hook
+23:20:45,408 INFO  [MSC service thread 1-3][HookHotDeployListener:711] Hook for portal-compat-hook is available for use
+23:20:45,411 INFO  [MSC service thread 1-3][HotDeployEvent:109] Plugin private-plugin-installer-hook requires portal-compat-hook
+23:20:45,448 INFO  [MSC service thread 1-3][HotDeployImpl:185] Deploying private-plugin-installer-hook from queue
+23:20:45,449 INFO  [MSC service thread 1-3][PluginPackageUtil:1049] Reading plugin package for private-plugin-installer-hook
+23:20:45,500 INFO  [MSC service thread 1-3][HookHotDeployListener:584] Registering hook for private-plugin-installer-hook
+23:20:46,234 INFO  [MSC service thread 1-3][HookHotDeployListener:711] Hook for private-plugin-installer-hook is available for use
+23:20:46,236 INFO  [MSC service thread 1-3][HotDeployEvent:109] Plugin resources-importer-web requires portal-compat-hook
+23:20:46,270 INFO  [MSC service thread 1-3][HotDeployImpl:185] Deploying resources-importer-web from queue
+23:20:46,270 INFO  [MSC service thread 1-3][PluginPackageUtil:1049] Reading plugin package for resources-importer-web
+23:20:46,345 INFO  [MSC service thread 1-3][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook
+23:20:46,370 INFO  [MSC service thread 1-3][HotDeployImpl:185] Deploying marketplace-portlet from queue
+23:20:46,371 INFO  [MSC service thread 1-3][PluginPackageUtil:1049] Reading plugin package for marketplace-portlet
+23:20:46,693 INFO  [MSC service thread 1-3][HookHotDeployListener:584] Registering hook for marketplace-portlet
+23:20:46,708 INFO  [MSC service thread 1-3][HookHotDeployListener:711] Hook for marketplace-portlet is available for use
+23:20:46,709 INFO  [MSC service thread 1-3][PortletHotDeployListener:295] Registering portlets for marketplace-portlet
+23:20:46,776 INFO  [MSC service thread 1-3][PortletHotDeployListener:459] 2 portlets for marketplace-portlet are available for use
+23:20:47,389 INFO  [liferay/scheduler_dispatch-4][PluginPackageUtil:1308] Reloading repositories
+23:21:35,177 INFO  [com.liferay.portal.plugin.PluginPackageUtil][PluginPackageUtil:1438] Checking for available updates
+23:21:35,180 INFO  [com.liferay.portal.plugin.PluginPackageUtil][PluginPackageUtil:1482] Finished checking for available updates in 2 ms
+23:45:18,142 INFO  [MSC service thread 1-3][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook
+23:45:18,142 INFO  [MSC service thread 1-3][PluginPackageUtil:1049] Reading plugin package for marketplace-portlet
+23:45:18,146 INFO  [MSC service thread 1-15][HotDeployEvent:109] Plugin resources-importer-web requires portal-compat-hook
+23:45:18,153 INFO  [MSC service thread 1-8][HotDeployEvent:109] Plugin private-plugin-installer-hook requires portal-compat-hook
+23:45:18,186 INFO  [MSC service thread 1-3][HookHotDeployListener:834] Hook for marketplace-portlet was unregistered
+23:45:18,187 INFO  [MSC service thread 1-3][PortletHotDeployListener:491] Unregistering portlets for marketplace-portlet
+23:45:18,197 INFO  [MSC service thread 1-3][PortletHotDeployListener:530] 2 portlets for marketplace-portlet was unregistered
+23:46:37,592 INFO  [MSC service thread 1-11][DialectDetector:71] Determine dialect for Oracle 11
+23:46:37,606 INFO  [MSC service thread 1-11][DialectDetector:136] Found dialect org.hibernate.dialect.Oracle10gDialect
+23:46:47,867 WARN  [MSC service thread 1-11][PDFProcessorImpl:235] Liferay is not configured to use ImageMagick. For better quality document and image previews, install ImageMagick and enable it in portal-ext.properties or in the Server Administration control panel at: http://<server>/group/control_panel/manage/-/server/external-services
+23:46:52,544 INFO  [MSC service thread 1-11][BaseDB:478] Database supports case sensitive queries
+23:46:53,390 INFO  [MSC service thread 1-11][LicenseManager:?] Portal Development license validation passed
+23:46:54,842 INFO  [MSC service thread 1-11][ServerDetector:169] Server supports hot deploy
+23:46:54,847 INFO  [MSC service thread 1-11][PluginPackageUtil:1046] Reading plugin package for the root context
+23:47:00,465 INFO  [MSC service thread 1-11][AutoDeployDir:144] Auto deploy scanner started for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy
+23:47:02,078 INFO  [MSC service thread 1-11][HotDeployEvent:109] Plugin private-plugin-installer-hook requires portal-compat-hook
+23:47:02,120 INFO  [MSC service thread 1-11][HotDeployImpl:239] Queueing private-plugin-installer-hook for deploy because it is missing portal-compat-hook
+23:47:02,143 INFO  [MSC service thread 1-11][HotDeployImpl:185] Deploying portal-compat-hook from queue
+23:47:02,145 INFO  [MSC service thread 1-11][PluginPackageUtil:1049] Reading plugin package for portal-compat-hook
+23:47:02,218 INFO  [MSC service thread 1-11][HookHotDeployListener:584] Registering hook for portal-compat-hook
+23:47:02,364 INFO  [MSC service thread 1-11][HookHotDeployListener:711] Hook for portal-compat-hook is available for use
+23:47:02,367 INFO  [MSC service thread 1-11][HotDeployImpl:185] Deploying private-plugin-installer-hook from queue
+23:47:02,368 INFO  [MSC service thread 1-11][PluginPackageUtil:1049] Reading plugin package for private-plugin-installer-hook
+23:47:02,426 INFO  [MSC service thread 1-11][HookHotDeployListener:584] Registering hook for private-plugin-installer-hook
+23:47:02,866 INFO  [MSC service thread 1-11][HookHotDeployListener:711] Hook for private-plugin-installer-hook is available for use
+23:47:02,868 INFO  [MSC service thread 1-11][HotDeployEvent:109] Plugin resources-importer-web requires portal-compat-hook
+23:47:02,906 INFO  [MSC service thread 1-11][HotDeployImpl:185] Deploying resources-importer-web from queue
+23:47:02,907 INFO  [MSC service thread 1-11][PluginPackageUtil:1049] Reading plugin package for resources-importer-web
+23:47:02,967 INFO  [MSC service thread 1-11][HotDeployEvent:109] Plugin marketplace-portlet requires portal-compat-hook
+23:47:04,143 INFO  [MSC service thread 1-11][HotDeployImpl:185] Deploying marketplace-portlet from queue
+23:47:04,144 INFO  [MSC service thread 1-11][PluginPackageUtil:1049] Reading plugin package for marketplace-portlet
+23:47:04,580 INFO  [MSC service thread 1-11][HookHotDeployListener:584] Registering hook for marketplace-portlet
+23:47:04,595 INFO  [MSC service thread 1-11][HookHotDeployListener:711] Hook for marketplace-portlet is available for use
+23:47:04,597 INFO  [MSC service thread 1-11][PortletHotDeployListener:295] Registering portlets for marketplace-portlet
+23:47:04,696 INFO  [MSC service thread 1-11][PortletHotDeployListener:459] 2 portlets for marketplace-portlet are available for use
+23:54:24,028 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing oym-layout-3-layouttpl-6.1.20.1.war
+23:54:24,032 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LayoutTemplateAutoDeployListener:51] Copying layout templates for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/oym-layout-3-layouttpl-6.1.20.1.war
+23:54:24,037 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying oym-layout-3-layouttpl-6.1.20.1.war
+23:54:25,508 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2233] Modifying Servlet 2.4 /tmp/20130908235424044/WEB-INF/web.xml
+23:54:25,546 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LayoutTemplateAutoDeployListener:57] Layout templates for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/oym-layout-3-layouttpl-6.1.20.1.war copied successfully. Deployment will start in a few seconds.
+23:54:32,286 INFO  [MSC service thread 1-8][HotDeployImpl:185] Deploying oym-layout-3-layouttpl from queue
+23:54:32,287 INFO  [MSC service thread 1-8][PluginPackageUtil:1049] Reading plugin package for oym-layout-3-layouttpl
+23:54:32,326 INFO  [MSC service thread 1-8][LayoutTemplateHotDeployListener:88] Registering layout templates for oym-layout-3-layouttpl
+23:54:32,336 ERROR [MSC service thread 1-8][LayoutTemplateLocalServiceImpl:459] No content found at WAP template path /oym_layout_3.wap.tpl
+23:54:32,337 INFO  [MSC service thread 1-8][LayoutTemplateHotDeployListener:100] 1 layout template for oym-layout-3-layouttpl is available for use
+23:54:38,214 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][AutoDeployDir:215] Processing oym-layout-5-layouttpl-6.1.20.1.war
+23:54:38,222 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LayoutTemplateAutoDeployListener:51] Copying layout templates for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/oym-layout-5-layouttpl-6.1.20.1.war
+23:54:38,225 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:820] Deploying oym-layout-5-layouttpl-6.1.20.1.war
+23:54:38,312 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][BaseDeployer:2233] Modifying Servlet 2.4 /tmp/20130908235438228/WEB-INF/web.xml
+23:54:38,326 INFO  [com.liferay.portal.kernel.deploy.auto.AutoDeployScanner][LayoutTemplateAutoDeployListener:57] Layout templates for /home/laishidua/bin/liferay-portal-6.1.30-ee-ga3/deploy/oym-layout-5-layouttpl-6.1.20.1.war copied successfully. Deployment will start in a few seconds.
+23:54:43,946 INFO  [MSC service thread 1-4][HotDeployImpl:185] Deploying oym-layout-5-layouttpl from queue
+23:54:43,947 INFO  [MSC service thread 1-4][PluginPackageUtil:1049] Reading plugin package for oym-layout-5-layouttpl
+23:54:43,980 INFO  [MSC service thread 1-4][LayoutTemplateHotDeployListener:88] Registering layout templates for oym-layout-5-layouttpl
+23:54:43,984 ERROR [MSC service thread 1-4][LayoutTemplateLocalServiceImpl:459] No content found at WAP template path /oym_layout_5.wap.tpl
+23:54:43,985 INFO  [MSC service thread 1-4][LayoutTemplateHotDeployListener:100] 1 layout template for oym-layout-5-layouttpl is available for use
+23:55:02,849 INFO  [com.liferay.portal.plugin.PluginPackageUtil][PluginPackageUtil:1438] Checking for available updates
+23:55:04,943 INFO  [com.liferay.portal.plugin.PluginPackageUtil][PluginPackageUtil:1482] Finished checking for available updates in 2092 ms
