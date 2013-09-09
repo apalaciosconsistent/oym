@@ -14,11 +14,38 @@
  */
 --%>
 
-<liferay-ui:tabs
-	names="portlet-plugins,theme-plugins,layout-template-plugins"
-	param="tabs2"
-	url="<%= portletURL.toString() %>"
-/>
+<%
+String portletId = portletDisplay.getId();
+%>
+
+<c:choose>
+	<c:when test="<%= portletId.equals(PortletKeys.ADMIN_PLUGINS) %>">
+
+		<%
+		PortletURL installPluginsURL = PortletURLFactoryUtil.create(request, PortletKeys.PLUGIN_INSTALLER, themeDisplay.getPlid(), PortletRequest.RENDER_PHASE);
+
+		installPluginsURL.setWindowState(LiferayWindowState.MAXIMIZED);
+		installPluginsURL.setPortletMode(PortletMode.VIEW);
+
+		installPluginsURL.setParameter("struts_action", "/plugin_installer/view");
+		installPluginsURL.setParameter("backURL", currentURL);
+		%>
+
+		<liferay-ui:tabs
+			names="portlet-plugins,theme-plugins,layout-template-plugins,private-plugin-installer"
+			param="tabs2"
+			url="<%= portletURL.toString() %>"
+			url3="<%= installPluginsURL.toString() %>"
+		/>
+	</c:when>
+	<c:otherwise>
+		<liferay-ui:tabs
+			names="portlet-plugins,theme-plugins,layout-template-plugins"
+			param="tabs2"
+			url="<%= portletURL.toString() %>"
+		/>
+	</c:otherwise>
+</c:choose>
 
 <c:choose>
 	<c:when test='<%= tabs2.equals("theme-plugins") %>'>
